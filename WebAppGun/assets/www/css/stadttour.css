@@ -1,0 +1,49 @@
+html, body, #page, #inhalt {
+height:100%;
+}
+
+#inhalt {
+ 	background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: grey;}
+
+
+#sprechblase {
+width: 50%;
+position: fixed;
+z-index: 0;
+}
+
+#sbText {
+border: 1px solid black;
+width:40%;
+position: fixed;
+left: 5%;
+top: 5%;
+z-index: 10;
+}
+
+#startbutton {
+position:fixed;
+bottom: 15%;
+left: 5%;
+	}
+
+
+
+#chara {
+width: 100%;
+position: fixed;
+top: 10%;
+left: 20%;
+}
+
+#footer {
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+
+#footer a {
+width: 45%;
+}
