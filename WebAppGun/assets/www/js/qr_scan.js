@@ -1,5 +1,5 @@
 function scan(){
-		document.getElementById("scan").addEventListener("click", function(){
+		document.getElementById("qrscan").addEventListener("click", function(){
 			//alert("Test successful");
 			window.plugins.barcodeScanner.scan( 
 				function(result) { 

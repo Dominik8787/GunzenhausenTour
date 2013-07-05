@@ -15,9 +15,11 @@ More info: http://view.jquerymobile.com/1.3.0/
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/stadttour.js"></script>
 <script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/barcodescanner.js"></script>
+<script src="js/qr_scan.js"></script>
 <style type="text/css">
-            #inhalt {
-                background-image: url(img/hg/hg01.jpg);
+            #inhalt {background-image: url(img/hg/hg01.jpg);
                
                 
             }
@@ -26,33 +28,175 @@ More info: http://view.jquerymobile.com/1.3.0/
 
 </head>
 <body>
+<!--Startseite -->
+	<div data-role="page" id="page00_01" class="page">
+		<div id="inhalt" data-role="content" class="right">
+			<!--<object id=sprechblase data="img/Sprechblase.svg" type="image/svg+xml">  </object>-->
+			<div id="sbText">
+				<div>
+					<p>Oh! <br/> Verzeihung, die Herrschaften!</p>
+					<p>Jetzt hätte ich Sie fast umgerannt... <br/> Ich bin leider etwas in Eile, wissen Sie, mein Falkner wartet bereits auf mich…</p>
+				</div>
+			</div>
+			<a href="#page00_02" data-prefetch="true" data-transition="slidefade" id="weiterButton" data-role="button" data-theme="a">Weiter</a>
+			<img id="chara" src="img/chara/markgraf3.gif" alt="chara" class="left"/>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
 
-	<div id="page" data-role="page" id="page1">
+
+<!--Seite 2-->
+	<div data-role="page" id="page00_02" class="page">
+		<div id="inhalt" data-role="content" class="left">
+			<div id="sbText">
+				<div>
+					<p>Aber wo sind nur wieder meine Manieren! </p>
+					<p>Gestatten Sie, dass ich mich vorstelle - <br/> mein Name ist Karl Wilhelm Friedrich von Brandenburg-Ansbach. </p>
+					<p>Hiererorts bin ich allerdings weithin bekannt als der ‚Wilde Markgraf‘.	</div>
+				</div>
+			<a href="#page00_03" data-prefetch="true" id="weiterButton" data-role="button" data-theme="a">Weiter</a>
+			<img id="chara" src="img/chara/markgraf3.gif" alt="chara" class="left"/>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->	
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+	
+	
+<!--Seite 3-->
+	<div data-role="page" id="page00_03" class="page">
+		<div id="inhalt" data-role="content" class="left">
+			<div id="sbText">
+				<div>
+					<p>Und Sie sind Wandersleut, nehme ich an?</p>
+					<p>Nun, das sieht man ja, so verstaubt wie Sie aussehen…
+					<p>Aber es freut mich, dass Sie Interesse an meiner Stadt haben, schön, schön…</p>
+					<p>Ich würde die Herrschaften ja zu gern etwas herumführen, aber wie gesagt, ich werde bereits erwartet…</p>
+				</div>
+			</div>					
+			<a href="#page00_04" id="weiterButton" data-prefetch="true" data-role="button" data-theme="a">Weiter</a>
+			<img id="chara" src="img/chara/markgraf1.gif" alt="chara" class="left"/>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+	
+	
+<!--Seite 4-->
+	<div data-role="page" id="page00_04" class="page">
+		<div id="inhalt" data-role="content" class="left">
+			<div id="sbText">
+				<div>
+					<p>Es sei denn, Sie hätten Lust mich zu begleiten? Mein Falkner erwartet mich bereits mit einem meiner schönsten Falken – ein wirklich majestätisches Tier! Ich wage zu sagen, dass es kaum irgendwo einen herrlicheren Vogel gibt!</p>
+				</div>
+			</div>					
+			<a href="#page00_05" id="weiterButton" data-prefetch="true" data-role="button" data-theme="a">Weiter</a>
+			<img id="chara" src="img/chara/markgraf1.gif" alt="chara" class="left"/>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+
+
+<!--Seite 5-->
+	<div data-role="page" id="page00_05" class="page">
+		<div id="inhalt" data-role="content" class="left">
+			<div id="sbText">
+				<div>
+					<p>…</p>
+					<p>Ach, die Herrschaften glauben mir nicht? Nun denn, dann folgen Sie mir und überzeugen Sie sich selbst!</p>
+				</div>
+			</div>					
+			<a href="#page00_06" id="weiterButton" data-prefetch="true" data-role="button" data-theme="a">Weiter</a>
+			<img id="chara" src="img/chara/markgraf2.gif" alt="chara" class="left"/>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->	
+	
+<!--Seite 5-->
+	<div data-role="page" id="page00_06" class="page">
+		<div id="inhalt" data-role="content" class="left">
+			<div class="raetsel_text">
+			<h1>Auf geht's</h1>
+			<p>Folge dem Wilden Markgrafen zum geodätischen Punkt!</p>
+			<div id="map_geo">
+				<img src="https://maps.googleapis.com/maps/api/staticmap?center=Gunzenhausen&amp;zoom=14&amp;size=288x300&amp;markers=49.115484,10.746256&amp;sensor=false">
+			</div>
+			<br>
+			<p>Dort findest du einen QR Code, den du scannen musst.</p>
+			<a href="#page00_06" id="qrscan" data-role="button" data-theme="a">Scannen!</a>
+			</div>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Mehr Informationen zum Ort</a>
+			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Aufgabe nicht spielbar?</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+	
+	
+<!-- Mehr Infos Zur Station -->	
+	<div data-role="page" id="page00_moreinfo" class="page">
 		<div id="inhalt" data-role="content">
-			
-    <object id=sprechblase data="img/Sprechblase.svg" type="image/svg+xml">  </object>
-    
-    <div id="sbText">blablabla<br />
-    blablabla<br />
-    blablabla<br />
-    blablabla<br />
-    blablabla<br />
-    blablabla<br /></div>
-    
-    <a href="#" id="startbutton" data-role="button" data-theme="a">Starten</a>
-    
-    <img id="chara" src="img/chara/markgraf1.gif" alt="chara" />
-    
-    <div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
-    <a href="#" data-role="button">Mehr Informationen zum Ort</a>
-    <a href="#" data-role="button">Aufgabe nicht spielbar?</a>
-    </div>
-    
-    
-    
+			<div class="infotext">
+				<h1>Infotext</h1>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
+			</div>
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<!--<a href="#page00_01" data-role="button">Zurück</a>-->
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+	
+	
+<!-- Hilfeseite -->
+	<div data-role="page" id="page00_help" class="page">
+		<div id="inhalt" data-role="content">
+			<object id=sprechblase data="img/Sprechblase.svg" type="image/svg+xml">  </object>    
+			<div id="sbText">
+			<p>Gibt es ein Problem? Vielleicht kann ich ja helfen...</p>
+			<p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
+			</div>
+			<img id="chara" src="img/chara/markgraf1.gif" alt="chara" />
+		</div> <!-- /content-->
+		
+		<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+			<a href="#page00_hint" data-prefetch="true" data-role="button">Gib mir einen Hinweis!</a>
+			<a href="notify.html" data-role="button">Problem melden</a>
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
+
+
+<!-- Hinweisseite -->
+<div data-role="page" id="page00_hint" class="page">
+	<div id="inhalt" data-role="content">
+		<object id=sprechblase data="img/Sprechblase.svg" type="image/svg+xml">  </object>    
+		<div id="sbText">
+		<p>Hinweis</p>
 		</div>
-	</div>
-	<!-- /page -->
+		<img id="chara" src="img/chara/markgraf1.gif" alt="chara" />
+	</div> <!-- /content-->
+	
+	<div id="footer" data-role="footer" data-position="fixed" class="ui-bar">
+	</div> <!-- /footer-->
+</div> 	<!-- /page -->
 
 </body>
 </html>
