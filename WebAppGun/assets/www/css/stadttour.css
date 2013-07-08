@@ -10,7 +10,7 @@ div.page {padding: 0!important;}
 h1, h2, h3, h4, h5, h6 {margin:0}
 p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgröße wieder entfernen!*/
 /* =================================================================*/
-#inhalt {
+.inhalt {
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -23,19 +23,19 @@ p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgröße wieder entfernen!*/
 
 
 /* ======================= Hauptseiten ======================*/
-#sprechblase {
+.sprechblase {
 width: 50%;
 position: fixed;
 z-index: 0;
 }
-#inhalt.left #sprechblase{
+.inhalt.left .sprechblase{
 	right: 2%;
 	-moz-transform: scaleX(-1);
 	-o-transform: scaleX(-1);
 	-webkit-transform: scaleX(-1);
 	transform: scaleX(-1);}
 
-#sbText_svg {
+.sbText_svg {
 border: 1px solid black;
 width:40%;
 position: fixed;
@@ -44,11 +44,11 @@ z-index: 10;
 max-height: 33%;
 overflow-y:scroll;
 }
-#inhalt.left #sbText_svg {right: 5%;}
-#inhalt.right #sbText_svg {left: 5%;}
+.inhalt.left .sbText_svg {right: 5%;}
+.inhalt.right .sbText_svg {left: 5%;}
 
 /* ------------------------ Alternative CSS Sprechblase ------------------*/
-#sbText {
+.sbText {
 border: 2px solid black;
 width:42%;
 height: 35%;
@@ -60,11 +60,11 @@ padding: 5px;
 border-radius: 10px;
 background: rgba(255,255,255,1);
 }
-#inhalt.left #sbText{right: 3%;}
-#inhalt.right #sbText{left: 3%;}
+.inhalt.left .sbText{right: 3%;}
+.inhalt.right .sbText{left: 3%;}
 
-#sbText div {height: 100%; overflow-y: scroll}
-#sbText:after {
+.sbText div {height: 100%; overflow-y: scroll}
+.sbText:after {
 content: "";
 height: 20px;
 width: 20px;
@@ -73,27 +73,29 @@ background-repeat: no-repeat;
 position: absolute;
 top: 88%;
 }
-#inhalt.left #sbText:after {background-image: url(../img/haken_links.png); left: -18px}
-#inhalt.right #sbText:after {background-image: url(../img/haken_rechts.png); right: -20px;}
+.inhalt.left .sbText:after {background-image: url(../img/haken_links.png); left: -18px}
+.inhalt.right .sbText:after {background-image: url(../img/haken_rechts.png); right: -20px;}
 
 /* ------------------------ Alternative CSS Sprechblase Ende ------------------*/
 
-#chara {
-width: 80%;
+.chara {
+width: 70%;
 height: auto;
 position: fixed;
 top: 15%;
 }
-#inhalt.left #chara {right:35%}
-#inhalt.right #chara {left:40%}
+.inhalt.left .chara {right:35%}
+.inhalt.right .chara {left:40%}
 
 
-#weiterButton {
-position:fixed;
-bottom: 15%;
+.weiterButton {
+position:absolute;
+top: 110%;
 }
-#inhalt.left #weiterButton {right:5%}
-#inhalt.right #weiterButton {left:5%}
+
+
+.inhalt.left .weiterButton {right:5%}
+.inhalt.right .weiterButton {left:5%}
 
 .raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center}
 
@@ -106,16 +108,18 @@ bottom: 15%;
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px}
 
 /*============================ Footer ==============================*/	
-#footer {
+.footer {
 position: fixed;
 bottom: 0;
 width: 100%;
 padding: 6px 10px 0;
-height: 9%; /*ST: Habe die HÃ¶he fixiert, damit der Footer auch angezeigt wird, wenn keine Buttons vorhanden sind. Bsp. auf Hinweisseiten */
+height: 9%; /*ST: Habe die Höhe fixiert, damit der Footer auch angezeigt wird, wenn keine Buttons vorhanden sind. Bsp. auf Hinweisseiten */
 }
 
-#footer a {
+.footer a {
 width: 45%;
 }
 
+.footer:last-child {
+}
 
