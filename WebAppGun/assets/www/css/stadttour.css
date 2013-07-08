@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html, body, div.page{
 height:100%;
 }
@@ -6,7 +8,7 @@ body {overflow-y: hidden;}
 div.page {padding: 0!important;}
 /* =================================================================*/
 h1, h2, h3, h4, h5, h6 {margin:0}
-p {margin: 0 0 5px; font-size: 13px} /*ST: SchriftgrÃ¶ÃŸe wieder entfernen!*/
+p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgröße wieder entfernen!*/
 /* =================================================================*/
 #inhalt {
 	-webkit-background-size: cover;
@@ -77,12 +79,13 @@ top: 88%;
 /* ------------------------ Alternative CSS Sprechblase Ende ------------------*/
 
 #chara {
-width: 100%;
+width: 80%;
+height: auto;
 position: fixed;
-bottom: 9%;
+top: 15%;
 }
-#inhalt.left #chara {right:23%}
-#inhalt.right #chara {left:20%}
+#inhalt.left #chara {right:35%}
+#inhalt.right #chara {left:40%}
 
 
 #weiterButton {
@@ -94,7 +97,7 @@ bottom: 15%;
 
 .raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center}
 
-/*==================== Einzelne Elemente zu den RÃ¤tseln ==================================*/
+/*==================== Einzelne Elemente zu den Rätseln ==================================*/
 
 /*===================== 00 ===================== */
 #map_geo img {width: 75%; display:block; margin:auto; border: 1px solid #555}

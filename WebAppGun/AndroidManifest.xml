@@ -39,6 +39,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.hsansbach.webappgun.MainActivity"
+            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_label" >
             <intent-filter>
@@ -49,6 +50,7 @@
         </activity>
         <activity
             android:name="org.apache.cordova.DroidGap"
+            android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_label" >
             <intent-filter>
