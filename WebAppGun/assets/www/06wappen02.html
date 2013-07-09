@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Stadttour</title>
+<title>Stadtwappen</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
 <link rel="stylesheet" href="css/stadttour.css" />
@@ -19,45 +19,45 @@
     </head>
     <body>
         <!--Startseite -->
-        <div data-role="page" id="page00_01" class="page">
-            <div class="inhalt left" data-role="content">
+        <div data-role="page" id="page06_21" class="page">
+            <div class="inhalt right" data-role="content">
                 <div class="sbText">
-					<p>Oh! <br/> Verzeihung, die Herrschaften!</p>
-                    <p>Jetzt hätte ich Sie fast umgerannt... <br/> Ich bin leider etwas in Eile, wissen Sie, mein Falkner wartet bereits auf mich...</p>
-				<a class="weiterButton" href="#page00_06" data-prefetch="true" data-role="button" data-theme="a">Weiter</a>
+					<p>Nun, das ist ein Problem Ah, aber wir haben Glück! Seht doch, der Storch fliegt herab! Er ist dort drüben gelandet!</p>
+				<a class="weiterButton" href="#page06_22" data-prefetch="true" data-role="button" data-theme="a">Weiter</a>
                 </div>
-                <img class="left chara" src="img/chara/markgraf3.gif" alt="chara"/>
+                <img class="right chara" src="img/chara/markgraf1.gif" alt="chara"/>
             </div> <!-- /content-->
 
             <div class=" footer ui-bar" data-role="footer" data-position="fixed">
-                <a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-                <a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>
+                <a href="#page06_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+                <a href="#page06_help" data-prefetch="true" data-role="button">Hilfe!</a>
             </div> <!-- /footer-->
         </div> 	<!-- /page -->
 		
-		<!--Scanneraufruf -->
-			<div data-role="page" id="page00_06" class="page">
+	
+	<div data-role="page" id="page06_22" class="page">
 		<div class="inhalt left" data-role="content">
 			<div class="raetsel_text">
 			<h1>Titel</h1>
 			<p>Rätselbeschreibung</p>
-			<div>
+			<div id="wappenwrapper">
+			 <object data="js/wappenGUN.svg" type="image/svg+xml" class="svg"> 
+				<h1>uups</h1>
+			 </object>
 			</div>
 			<br>
 			<p>Dort findest du einen QR Code, den du scannen musst.</p>
-			<a href="#page00_06" id="qrscan" data-role="button" data-theme="a">Scannen!</a>
+			<a href="#page06_22" id="qrscan" data-role="button" data-theme="a">Scannen!</a>
 			</div>
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
+			<a href="#page05_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+			<!--<a href="#page05_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
-	
 		
-
-
+		
         <!-- Mehr Infos Zur Station -->	
         <div data-role="page" id="page00_moreinfo" class="page">
             <div class="inhalt left" data-role="content">

@@ -81,6 +81,10 @@ top:103%;
 
 /*===================== 00 ===================== */
 #map_geo img {width: 75%; display:block; margin:auto; border: 1px solid #555}
+/*===================== 06-2 ===================== */
+#wappenwrapper{ width:100%; height:auto;}
+#svg {width:100%;}
+#wappenGUN {width:100%;}
 
 /* ======================= Mehr Informationen ======================*/
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px}
