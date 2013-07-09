@@ -23,35 +23,14 @@ p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgröße wieder entfernen!*/
 
 
 /* ======================= Hauptseiten ======================*/
-.sprechblase {
-width: 50%;
-position: fixed;
-z-index: 0;
-}
-.inhalt.left .sprechblase{
-	right: 2%;
-	-moz-transform: scaleX(-1);
-	-o-transform: scaleX(-1);
-	-webkit-transform: scaleX(-1);
-	transform: scaleX(-1);}
 
-.sbText_svg {
-border: 1px solid black;
-width:40%;
-position: fixed;
-top: 5%;
-z-index: 10;
-max-height: 33%;
-overflow-y:scroll;
-}
-.inhalt.left .sbText_svg {right: 5%;}
-.inhalt.right .sbText_svg {left: 5%;}
+/* ------------------------ CSS Sprechblase ------------------*/
 
-/* ------------------------ Alternative CSS Sprechblase ------------------*/
 .sbText {
 border: 2px solid black;
 width:42%;
-height: 35%;
+min-height: 30%;
+max-height: 70%;
 position: fixed;
 top: 3%;
 z-index: 10;
@@ -63,7 +42,6 @@ background: rgba(255,255,255,1);
 .inhalt.left .sbText{right: 3%;}
 .inhalt.right .sbText{left: 3%;}
 
-.sbText div {height: 100%; overflow-y: scroll}
 .sbText:after {
 content: "";
 height: 20px;
@@ -71,7 +49,7 @@ width: 20px;
 background-size: 90% auto;
 background-repeat: no-repeat;
 position: absolute;
-top: 88%;
+top: 70%;
 }
 .inhalt.left .sbText:after {background-image: url(../img/haken_links.png); left: -18px}
 .inhalt.right .sbText:after {background-image: url(../img/haken_rechts.png); right: -20px;}
@@ -90,12 +68,12 @@ top: 15%;
 
 .weiterButton {
 position:absolute;
-top: 110%;
+top:103%;
 }
 
 
-.inhalt.left .weiterButton {right:5%}
-.inhalt.right .weiterButton {left:5%}
+.inhalt.left .weiterButton {right:15%}
+.inhalt.right .weiterButton {left:15%}
 
 .raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center}
 
