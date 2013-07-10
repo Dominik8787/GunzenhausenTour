@@ -12,6 +12,16 @@
 <script src="cordova.js"></script>
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
+<script>
+function scan() {
+	$("#qrscan").click(function() {
+		//alert("Handler for .click() called.");
+		qrscan("testID");
+	});
+
+}
+window.onload=scan;
+</script>
 <style type="text/css">
             .inhalt {background-image: url(img/hg/hg01.jpg);   
             }
