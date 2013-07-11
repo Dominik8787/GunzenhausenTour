@@ -38,11 +38,11 @@ Seiten/ Stations Template
 				</div>
 				<a href="#pageXX_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
 			</div>
-			<img class="chara left" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
 		</div> <!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 	
@@ -56,11 +56,11 @@ Seiten/ Stations Template
 				</div>
 				<a href="#pageXX_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
 			</div>
-			<img class="chara left" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
+			<img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
 		</div> <!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>	
+			<a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>	
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 	
@@ -74,14 +74,14 @@ Seiten/ Stations Template
 			</div>
 		</div> <!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
+			<a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+			<!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 		
 		
 	<!-- Mehr Infos Zur Station / Triviaseite -->	
-	<div data-role="page" id="page00_moreinfo" class="page">
+	<div data-role="page" id="moreinfo" class="page">
 		<div class="inhalt" data-role="content">
 			<div class="infotext">
 				<h1>Infotext</h1>
@@ -94,7 +94,7 @@ Seiten/ Stations Template
 		
 		
 	<!-- Hilfeseite -->
-	<div data-role="page" id="pageXX_help" class="page">
+	<div data-role="page" id="help" class="page">
 		<div class="inhalt" data-role="content">
 			<div class="sbText">
 			<p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
@@ -110,7 +110,7 @@ Seiten/ Stations Template
 	
 	
 	<!-- Hinweisseite -->
-	<div data-role="page" id="pageXX_hint" class="page">
+	<div data-role="page" id="hint" class="page">
 		<div class="inhalt" data-role="content">
 			<div class="sbText">
 			<p>Hinweistext</p>
