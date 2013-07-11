@@ -13,13 +13,8 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script>
-function scan() {
-	$("#qrscan").click(function() {
-		//alert("Handler for .click() called.");
-		qrscan("testID");
-	});
-
-}
+<!-- QR Scan Funktion -->
+function scan() {$("#qrscan").click(function() {qrscan("01geo01.html");});}
 window.onload=scan;
 </script>
 <style type="text/css">
@@ -34,16 +29,16 @@ window.onload=scan;
 	<div data-role="page" id="page00_01" class="page">
 		<div class="inhalt right" data-role="content">
 			<div class="sbText">
+				<div>
 					<p>Oh! <br/> Verzeihung, die Herrschaften!</p>
 					<p>Jetzt hätte ich Sie fast umgerannt... <br/> Ich bin leider etwas in Eile, wissen Sie, mein Falkner wartet bereits auf mich...</p>
+				</div>
 				<a href="#page00_02" data-prefetch="true" data-transition="slidefade" class="weiterButton" data-role="button" data-theme="a">Weiter</a>
 			</div>
 			<img class="chara left" src="img/chara/markgraf3.gif" alt="chara"/>
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 
@@ -62,8 +57,6 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->	
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 	
@@ -84,8 +77,6 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 	
@@ -103,8 +94,6 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 
@@ -123,12 +112,10 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->	
 	
-<!--Seite 5-->
+<!--Seite 6-->
 	<div data-role="page" id="page00_06" class="page">
 		<div class="inhalt left" data-role="content">
 			<div class="raetsel_text">
@@ -144,8 +131,7 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-			<!--<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>-->
+			<a href="#page00_help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
 	
@@ -167,7 +153,7 @@ window.onload=scan;
 	
 <!-- Hilfeseite -->
 	<div data-role="page" id="page00_help" class="page">
-		<div class="inhalt" data-role="content">
+		<div class="inhalt left" data-role="content">
 			<div class="sbText">
 			<p>Gibt es ein Problem? Vielleicht kann ich ja helfen...</p>
 			<p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -176,7 +162,7 @@ window.onload=scan;
 		</div> <!-- /content-->
 		
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-			<a href="#page00_hint" data-prefetch="true" data-role="button">Gib mir einen Hinweis!</a>
+			<a href="#page00_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
 			<a href="notify.html" data-role="button">Problem melden</a>
 		</div> <!-- /footer-->
 	</div> 	<!-- /page -->
@@ -184,9 +170,9 @@ window.onload=scan;
 
 <!-- Hinweisseite -->
 <div data-role="page" id="page00_hint" class="page">
-	<div class="inhalt" data-role="content">
+	<div class="inhalt left" data-role="content">
 		<div class="sbText">
-		<p>Hinweis</p>
+		<p>Um fortzufahren, müsst ihr euch zum geodätischen Punkt begeben, der auf der Karte markiert ist. Dort findet ihr einen QR-Code, der euch weiterleiten wird!</p>
 		</div>
 		<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
 	</div> <!-- /content-->

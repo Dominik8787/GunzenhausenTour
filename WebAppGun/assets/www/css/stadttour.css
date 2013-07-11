@@ -75,8 +75,8 @@ top:103%;
 .inhalt.left .weiterButton {right:15%}
 .inhalt.right .weiterButton {left:15%}
 
-.raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center}
-
+.raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center; height: 90%}
+.raetsel_text h1{margin-bottom: 25px}
 /*==================== Einzelne Elemente zu den Rätseln ==================================*/
 
 /*===================== 00 ===================== */
