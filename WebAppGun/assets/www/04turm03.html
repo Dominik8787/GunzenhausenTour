@@ -13,7 +13,7 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
-function scan() {$("#qrscan").click(function() {qrscan("02lab01.html");});}
+function scan() {$("#qrscan").click(function() {qrscan("05saum01.html");});}
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -21,34 +21,39 @@ window.onload=scan;
 
 <body>
 <!--Startseite -->
-<div data-role="page" id="page01_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+<div data-role="page" id="page04_3_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
   <div class="inhalt left" data-role="content">
         <div class="sbText">
             <div>
-                <p>Ah, seid ihr also doch gekommen?</p>
-				<p>Sehr schön...<br>Wir müssen nur noch über die Brücke hier, mein Falkner wartet bereits beim Labyrinth auf der anderen Seite.
+                <p>Sehr schön!</p>
+				<p>Damit kommen wir zumindest wieder aus diesem Turm heraus…Aber was nun?</p>
             </div>
-            <a href="#page01_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+            <a href="#page04_3_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
-    <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">       
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
 
 <!--Rätselseite -->
-<div data-role="page" id="page01_02" class="page">
+<div data-role="page" id="page04_3_02" class="page">
     <div class="inhalt left" data-role="content">
         <div class="raetsel_text">
-            <h1>Und weiter!</h1>
-            <p>Finde den nächsten QR Code am Labyrinth!</p>
-        <a href="#page01_02" id="qrscan" data-role="button" data-theme="a">Scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
+            <h1>Wohin?</h1>
+            <p>Der Storch sagte etwas von einem grunzenden Tier...vielleicht findet sich in der Nähe ein QR-Code?</p>
+			<div class=alert>
+				<h4>Achtung!</h4>
+				<p>Ihr befindet euch in der Nähe der Hauptstraße, auf der eine Menge Verkehr herrschen kann.<p>
+				<p class="bd">Bitte seid vorsichtig!</p>
+			</div>
+        <a href="#page04_3_02" id="qrscan" data-role="button" data-theme="a">Scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+
+		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
         <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -58,8 +63,8 @@ window.onload=scan;
 <div data-role="page" id="moreinfo" class="page">
     <div class="inhalt" data-role="content">
         <div class="infotext">
-            <h1>Der 1. geodÃ¤tische Referenzpunkt in Bayern</h1>
-            <p>Infotext</p>
+            <h1>Infotext</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
@@ -72,7 +77,7 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
-        <p>Aber falls nicht, wÃ¼rdet ihr das Problem bitte melden?</p>
+        <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->

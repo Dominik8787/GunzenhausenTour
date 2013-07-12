@@ -13,7 +13,7 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
-function scan() {$("#qrscan").click(function() {qrscan("04turm01.html");});}
+function scan() {$("#qrscan").click(function() {qrscan("04turm02.html");});}
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -21,15 +21,13 @@ window.onload=scan;
 
 <body>
 <!--Startseite -->
-<div data-role="page" id="page03_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+<div data-role="page" id="page04_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
   <div class="inhalt left" data-role="content">
         <div class="sbText">
             <div>
-				<p>Da wären wir!</p>
-				<p>Wobei, der Storchenturm ist das eigentlich nicht...</p>
-				<p>Der befindet sich weiter in der Stadt und war früher mal als Drey-Brüder-Turm bekannt...</p>
+                <p>Hm, wenn wir den Färberturm hinaufsteigen sind wir fast auf gleicher Höhe wie der Storch…allerdings…</p>
             </div>
-            <a href="#page03_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+            <a href="#page04_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
@@ -40,29 +38,15 @@ window.onload=scan;
 
 
 <!--Seite 2-->
-<div data-role="page" id="page03_02" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+<div data-role="page" id="page04_02" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
     <div class="inhalt left" data-role="content">
         <div class="sbText">
             <div>
-                <p>Aber was soll man machen? Diese Vögel haben eben keinerlei Respekt für Traditionen!</p>
+                <p>Wisst ihr, dieser Turm hat seinen Namen nur, weil hier nebenan mal eine Färberei war.</p>
+				<p>Früher wurde er auch „Diebesturm“ genannt, da er als Gefängnis gedient hat.</p>
+				<p>Es widerstrebt mir immer wieder, ihn zu betreten...</p>
             </div>
-            <a href="#page03_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
-        </div>
-        <img class="chara" src="img/chara/markgraf2.gif" alt="chara"/> <!-- Charakterbild -->
-    </div> <!-- /content-->
-    <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-    </div> <!-- /footer-->
-</div>  <!-- /page -->
-
-<!--Seite 3-->
-<div data-role="page" id="page03_03" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
-    <div class="inhalt left" data-role="content">
-        <div class="sbText">
-            <div>
-                <p>Wie dem auch sei.<br>Ich bezweifle, dass der Storch uns von hier unten aus hört...</p>
-            </div>
-            <a href="#page03_04" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+            <a href="#page04_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
@@ -71,33 +55,75 @@ window.onload=scan;
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
-<!--Rätselseite -->
-<div data-role="page" id="page03_04" class="page">
+<!--Seite 3-->
+<div data-role="page" id="page04_03" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
     <div class="inhalt left" data-role="content">
-        <div class="raetsel_text">
-            <h1>Los gehts!</h1>
-            <p>Findet den Ort, von dem aus das folgende Foto aufgenommen wurde, um mit dem Storch zu sprechen!</p>
-			Find The View Bild
-			<div class=alert>
-				<h4>Achtung!</h4>
-				<p>Ihr befindet euch in der Nähe der Hauptstraße, auf der eine Menge Verkehr herrschen kann.<p>
-				<p class="bd">Bitte seid vorsichtig!</p>
-			</div>
-        <a href="#page03_04" id="qrscan" data-role="button" data-theme="a">Scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
+        <div class="sbText">
+            <div>
+                <p>Unsereins begibt sich einfach nicht an einen Ort wo früher einmal solches Gesindel untergebracht war.</p>
+            </div>
+            <a href="#page04_04" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
+        <img class="chara" src="img/chara/markgraf2.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
+<!--Seite 4-->
+<div data-role="page" id="page04_04" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Anderseits wurde der Turm zeitweise auch als Pulverlager genutzt – natürlich nicht gleichzeitig...</p>
+				<br>
+				<p>Naja, was solls…hinauf!</p>
+            </div>
+            <a href="#page04_05" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+
+<!--Entscheidungsseite -->
+<div data-role="page" id="page04_05" class="page">
+    <div class="inhalt left" data-role="content">
+        <div class="raetsel_text">
+		<div class="btn_group">
+		<a href="#page04_06" data-role="button" data-theme="a">Hinauf!</a>
+		<a href="04turm04.html" data-role="button" data-theme="a">Die Tür ist zu...</a>
+		</div>
+        </div>
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+<!--Seite 6 -->
+<div data-role="page" id="page04_06" class="page">
+    <div class="inhalt left" data-role="content">
+        <div class="raetsel_text">
+            <h1>Los geht's!</h1>
+            <p>Findet & scannt den QR-Code im Färberturm!</p>
+        <a href="#page04_06" id="qrscan" data-role="button" data-theme="a">Scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
+        </div>
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
 
 <!-- Mehr Infos Zur Station / Triviaseite -->   
 <div data-role="page" id="moreinfo" class="page">
     <div class="inhalt" data-role="content">
         <div class="infotext">
-            <h1>Storchenturm</h1>
-            <p></p>
+            <h1>Infotext</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
@@ -107,7 +133,7 @@ window.onload=scan;
 
 <!-- Hilfeseite -->
 <div data-role="page" id="help" class="page">
-    <div class="inhalt left" data-role="content">
+    <div class="inhalt" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
         <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -115,7 +141,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
         <a href="notify.html" data-role="button">Problem melden</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -123,10 +149,9 @@ window.onload=scan;
 
 <!-- Hinweisseite -->
 <div data-role="page" id="hint" class="page">
-    <div class="inhalt left" data-role="content">
+    <div class="inhalt" data-role="content">
         <div class="sbText">
-        <p>Das Foto wurde fast auf gleicher Höhe wie das Storchennest aufgenommen, das heißt von ziemlich weit oben. <p>
-		<p>Welcher Ort könnte dafür in Frage kommen?</p>
+        <p>Hinweistext</p>
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
