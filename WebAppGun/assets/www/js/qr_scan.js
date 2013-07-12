@@ -10,8 +10,12 @@ function qrscan(pageID){
 					//alert("We got a barcode\n" +	"Result: " + result.text + "\n res: "+ res);
                   	if(res == pageID) {      		
                   		alert("Textmatch!");
-                  		window.location.href=pageID;		
+                  		window.localStorage.setItem( 'qrcode', pageID);
+                  		window.location.href=pageID;			
                   	} else {
+                  		//auch im else statement wg debugging
+                  		window.localStorage.setItem( 'qrcode', pageID);
+                  		
                   		alert("Oops! \n Da ist wohl was schief gegangen... \n Das ist nicht der richtige QR-Code!")
                   	}
 				},
