@@ -13,7 +13,7 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
-function scan() {$("#qrscan").click(function() {qrscan("05saum01.html");});}
+function scan() {$("#qrscan").click(function() {qrscan("testID");});}
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -21,39 +21,59 @@ window.onload=scan;
 
 <body>
 <!--Startseite -->
-<div data-role="page" id="page04_3_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
-  <div class="inhalt left" data-role="content">
+<div data-role="page" id="page05_2_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+  <div class="inhalt left data-role="content">
         <div class="sbText">
             <div>
-                <p>Sehr schön!</p>
-				<p>Damit kommen wir zumindest wieder aus diesem Turm heraus…Aber was nun?</p>
+                <p>Das sind eindeutig Falkenfedern!</p>
+				<p>Und was viel wichtiger ist, dass sind eindeutig Federn von <b>meinem</b> Falken!<br>
+					Seht ihr, wie sie glänzen, wie geschmeidig sie sind?</p>
+				<p>Wir müssen schleunigst das Mädchen finden und herausfinden, woher sie die hat!</p>
+				<br>
+				<p>Sprich, Statue, wo ist sie hin?</p>
             </div>
-            <a href="#page04_3_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+            <a href="#page05_2_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
-        <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
+        <img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
-    <div class="footer ui-bar" data-role="footer" data-position="fixed">       
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+<!--Seite 2-->
+<div data-role="page" id="page05_2_02" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+    <div class="inhalt right" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Das Mädchen? Ich glaube sie wollte zu einem Brunnen…</p>
+				<p>Hier, ich zeige euch den Weg...</p>
+            </div>
+            <a href="#page05_2_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/storch1.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
 
 <!--Rätselseite -->
-<div data-role="page" id="page04_3_02" class="page">
+<div data-role="page" id="page05_2_03" class="page">
     <div class="inhalt left" data-role="content">
         <div class="raetsel_text">
-            <h1>Wohin?</h1>
-            <p>Der Storch sagte etwas von einem grunzenden Tier...vielleicht findet sich in der Nähe ein QR-Code?</p>
-			<div class=alert>
-				<h4>Achtung!</h4>
-				<p>Ihr befindet euch in der Nähe der Hauptstraße, auf der eine Menge Verkehr herrschen kann.<p>
-				<p class="bd">Bitte seid vorsichtig!</p>
-			</div>
-        <a href="#page04_3_02" id="qrscan" data-role="button" data-theme="a">QR-Code scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
+            <h1>Los geht's</h1>
+            <p>Begib dich zu dem Brunnen, um das Mädchen zu finden!</p>
+			Karte zum Brunnen
+        <a href="#page00_06" id="qrscan" data-role="button" data-theme="a">QR-Code scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
         <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
