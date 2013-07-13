@@ -1,0 +1,239 @@
+﻿<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #vogel {
+                background-image: url(img/punkte.jpg);
+                background-size: 100% 100%;
+                width: 320px;
+                height: 480px;
+            }
+            #overlay, #canvas {
+                width: 320px;
+                height: 480px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #punkt0 {                
+                top: 403px;
+                left: 130px;                
+            }
+
+            #punkt1 {                
+                top: 300px;
+                left: 150px;                
+            }
+
+            #punkt2 {
+                top: 251px;
+                left: 148px;
+            }
+
+            #punkt3 {
+                top: 165px;
+                left: 97px;
+            }
+
+            #punkt4 {
+                left: 118px;
+                top: 83px;
+            }
+
+            #punkt5 {
+                left: 60px;
+                top: 119px;
+            }
+
+
+            #punkt6 {
+                left: 103px;
+                top: 55px;
+            }
+
+
+            #punkt7 {
+                left: 114px;
+                top: 27px;
+            }
+
+            #punkt8 {
+                left: 150px;
+                top: 31px;
+            }
+
+
+            #punkt9 {
+                left: 149px;
+                top: 81px;
+            }
+
+            #punkt10 {
+                left: 137px;
+                top: 111px;
+            }
+
+            #punkt11 {
+                left: 242px;
+                top: 162px;
+            }
+
+            #punkt12 {
+                left: 285px;
+                top: 242px;
+            }
+
+            #punkt13 {
+                left: 259px;
+                top: 266px;
+            }
+
+
+            #punkt14 {
+                left: 200px;
+                top: 254px;
+            }
+
+
+            #punkt15 {
+                left: 201px;
+                top: 309px;
+            }
+
+            #punkt16 {
+                left: 184px;
+                top: 402px;
+            }
+
+            .punkt {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                cursor: pointer;
+                background-color: #ff0000;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" width="320" height="480"></canvas>
+        <div id="overlay">
+            <div id="punkt0" class="punkt"></div>
+            <div id="punkt1" class="punkt"></div>
+            <div id="punkt2" class="punkt"></div>
+            <div id="punkt3" class="punkt"></div>      
+            <div id="punkt4" class="punkt"></div>
+            <div id="punkt5" class="punkt"></div>
+            <div id="punkt6" class="punkt"></div>
+            <div id="punkt7" class="punkt"></div>      
+            <div id="punkt8" class="punkt"></div>
+            <div id="punkt9" class="punkt"></div>
+            <div id="punkt10" class="punkt"></div>
+            <div id="punkt11" class="punkt"></div>
+            <div id="punkt12" class="punkt"></div>
+            <div id="punkt13" class="punkt"></div>
+            <div id="punkt14" class="punkt"></div>
+            <div id="punkt15" class="punkt"></div>
+            <div id="punkt16" class="punkt"></div>
+        </div>
+        <div id="vogel">
+
+        </div>
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="js/RequestAnimationFrame.js"></script>
+        <script src="js/tween.min.js"></script>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+            var context = canvas.getContext("2d");
+            context.fillStyle = 'black';
+            context.strokeWidth = 5;
+
+            var coords = [];
+            var clickCount = 0;
+            var tween = null;
+
+            var drawPoints = [];
+
+            var Punkt = {
+                x: 0,
+                y: 0
+            };
+
+            for (var i = 0; i !== 16; i++) {
+
+                var p = Object.create(Punkt);
+                p.x = parseInt($("#punkt" + i).css("left")) + 5;
+                p.y = parseInt($("#punkt" + i).css("top")) + 5;
+                coords.push(p);
+            }
+
+            function clickHandler() {
+                var index = $(this).index();
+                console.log("Index " + index);
+                console.log("X-achse: " + coords[index].x);
+                context.beginPath();
+                context.arc(coords[index].x, coords[index].y, 40, 0, 2 * Math.PI);
+                context.stroke();
+                context.closePath();
+
+                drawPoints[clickCount] = coords[index];
+                clickCount++;
+
+                if (clickCount === 2) {
+                    clickCount = 0;
+                    drawLine(drawPoints);
+                    drawPoints = [];
+                }
+            }
+
+            $(".punkt").click(clickHandler);
+
+            function pointClicked(index) {
+
+            }
+
+            function drawLine(points) {
+                $(".punkt").off("click");
+
+                context.beginPath();
+                context.moveTo(points[0].x, points[0].y);
+
+                var endPoint = {
+                    x: points[0].x,
+                    y: points[0].y
+                };
+
+                tween = new TWEEN.Tween(endPoint)
+                        .to({x: points[1].x, y: points[1].y}, 1000)
+                        .easing(TWEEN.Easing.Linear.None)
+                        .onUpdate(function() {
+
+                    context.lineTo(endPoint.x, endPoint.y);
+                    context.closePath();
+                    context.stroke();
+
+                }).start();
+
+                tween.onComplete(function() {
+                    $(".punkt").click(clickHandler);
+                });
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+
+                TWEEN.update();
+            }
+            ;
+
+            animate();
+
+        </script>
+    </body>
+</html>
