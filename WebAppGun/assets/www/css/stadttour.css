@@ -90,7 +90,9 @@ top:103%;
 #wappenwrapper{ width:100%; height:auto;}
 #svg {width:100%;}
 #wappenGUN {width:100%;}
-
+/*===================== 06 ===================== */
+#houses {height: 10%; margin: 0 0 30px}
+#houses div{background-color: #fff; float: left; height: 100%; width: 13%; margin-left: 5%; border: 1px solid #000;}
 
 /* ======================= Mehr Informationen ======================*/
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px}
