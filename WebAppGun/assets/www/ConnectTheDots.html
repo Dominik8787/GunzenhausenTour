@@ -150,6 +150,7 @@ and open the template in the editor.
             var started = false;
             var coords = [];
             var clickCount = 0;
+            var alertCount = 0;
             var tween = null;
             var oldPoint;
             var newPoints = [];
@@ -181,7 +182,11 @@ and open the template in the editor.
                 //console.log("X-achse: " + coords[index].x);
                 drawPoints[clickCount] = coords[index];
                 clickCount++;
-
+                alertCount++;
+                if (alertCount === 20) {
+                    alert("folge den rot leuchtenden Punkten!");
+                    window.location.reload();
+                }
                 console.log(clickCount);
                 //console.log("drawPoints"+ drawPoints[1]);
 
