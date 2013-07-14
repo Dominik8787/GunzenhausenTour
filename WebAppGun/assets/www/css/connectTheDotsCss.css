@@ -1,17 +1,20 @@
- #vogel {
-                background-image: url(img/punkte.jpg);
-                background-size: 100% 100%;
-                width: 320px;
+#vogel {
+	background-image: url(img/punkte.jpg);
+	background-size: 100% 100%;
+	width: 320px;
+	height: 480px;
+}
+
+#overlay,#canvas {
+	 width: 320px;
                 height: 480px;
-            }
-            #overlay, #canvas {
-                min-width: 100%;
-                min-height: 90%;
                 position: absolute;
-                top: 1;
-                left: 0;
-            }
-             #punkt0 {                
+	top: 0;
+	margin-top:8%;
+	left: 0;
+}
+
+ #punkt0 {                
                 top: 403px;
                 left: 130px;                
             }
@@ -79,23 +82,100 @@
                 left: 184px;
                 top: 402px;
             }
-            .punkt {
-                position:absolute;height:12px;width:12px;background-color:#000;border-radius:10px;float:left;
-            }
 
-            .active {
-                -webkit-animation: dotBackgroundColor .7s linear infinite alternate;
-                -moz-animation: dotBackgroundColor .7s linear infinite alternate;
-                -o-animation: dotBackgroundColor .7s linear infinite alternate;
-                animation: dotBackgroundColor .7s linear infinite alternate;
-                background-color:#f00;
-            }
-            @-webkit-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @-moz-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @-o-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+.punkt {
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	background-color: #000;
+	border-radius: 10px;
+	float: left;
+}
 
-            @-webkit-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @-moz-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @-o-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @keyframes numberColor{ from{color:#f00;}to{color:#000;}}
+.active {
+	-webkit-animation: dotBackgroundColor .7s linear infinite alternate;
+	-moz-animation: dotBackgroundColor .7s linear infinite alternate;
+	-o-animation: dotBackgroundColor .7s linear infinite alternate;
+	animation: dotBackgroundColor .7s linear infinite alternate;
+	background-color: #f00;
+}
+
+@
+-webkit-keyframes dotBackgroundColor {
+	from {background-color: #f00;
+}
+
+to {
+	background-color: #000;
+}
+
+}
+@
+-moz-keyframes dotBackgroundColor {
+	from {background-color: #f00;
+}
+
+to {
+	background-color: #000;
+}
+
+}
+@
+-o-keyframes dotBackgroundColor {
+	from {background-color: #f00;
+}
+
+to {
+	background-color: #000;
+}
+
+}
+@
+keyframes dotBackgroundColor {
+	from {background-color: #f00;
+}
+
+to {
+	background-color: #000;
+}
+
+}
+@
+-webkit-keyframes numberColor {
+	from {color: #f00;
+}
+
+to {
+	color: #000;
+}
+
+}
+@
+-moz-keyframes numberColor {
+	from {color: #f00;
+}
+
+to {
+	color: #000;
+}
+
+}
+@
+-o-keyframes numberColor {
+	from {color: #f00;
+}
+
+to {
+	color: #000;
+}
+
+}
+@
+keyframes numberColor {
+	from {color: #f00;
+}
+
+to {
+	color: #000;
+}
+}

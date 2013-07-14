@@ -29,7 +29,8 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Wer kann helfen?</h1>
-            <p>Verbinde die <strong>rot leuchtenden Punkte</strong>, um einen Hinweis zu bekommen!</p>
+            <p style="margin-top:-10%;">Verbinde die <strong>rot leuchtenden Punkte</strong>, um einen Hinweis zu bekommen!</p>
+             </div>
 			﻿<!--
 To change this template, choose Tools | Templates
 and open the template in the editor.
@@ -60,12 +61,16 @@ and open the template in the editor.
             <div id="punkt16" class="punkt"></div>
         </div>
        
-  
-      
- <!-- <a href="02lab01.html#page02_10">braucht eine Weiterleitung/ einen Weiter-Button zu 02lab01.html#page02_10</a></p> -->
-        </div>
+  <script type="text/javascript">
+  function Target() {
+	  var Destination = "02lab01.html#page02_10";
+	  window.location.href= Destination; 
+  }
+  </script>
+         
     </div> <!-- /content-->
-    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+ <div class="footer ui-bar" data-role="footer" data-position="fixed">
+ <a id="WeiterButtonConnectTheDots" href="javascript:Target()" data-prefetch="true" data-role="button">Weiter</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
