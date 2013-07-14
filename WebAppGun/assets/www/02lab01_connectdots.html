@@ -13,6 +13,9 @@
 <script src="cordova.js"></script>
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
+<script src="js/RequestAnimationFrame.js"></script>
+<script src="js/tween.min.js"></script>
+<script src="js/connectTheDots.js"></script>
 
 <script> <!-- Löst QR Code Scanner aus-->
 function scan() {$("#qrscan").click(function() {qrscan("testID");});}
@@ -36,11 +39,11 @@ To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
 
-   <script src="js/RequestAnimationFrame.js"></script>
-<script src="js/tween.min.js"></script>
-<script src="js/connectTheDots.js"></script>
 
+
+<!--  canvas für die linien -->
         <canvas id="canvas" width="320" height="480"></canvas>
+        <!--  hier werden die einzelnen Punkte als div generiert -->
         <div id="overlay">
             <div id="punkt0" class="punkt"></div>
             <div id="punkt1" class="punkt"></div>

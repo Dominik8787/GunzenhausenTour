@@ -30,31 +30,28 @@ $(document).ready(function() {
 	}
 
 	function clickHandler() {
-		//Check ob das Spiel beendet ist (punkt 16 ist aktiv und wird noch mal geklickt)
+		//Check ob das Spiel beendet ist (punkt 16 hat KLasse active und wird noch mal geklickt)
 		 if ($('#punkt16').is('.active') ) {
 			 	
 				 alert("weiterleiten!")
 				 $("#WeiterButtonConnectTheDots").show();
 				 context.globalAlpha = 0;
 				 var imgFadeInter = setInterval(function(){
-				// clearContext(); // a function that clears the canvas
+				
 				 context.globalAlpha += 0.01;
 				 context.drawImage(imageObj, 10, 10, 320, 480);
 				 if(context.globalAlpha == 1){ 
 					 clearInterval(imgFadeInter); 
 				 }
-				 }, 16); // 16ms because jQuery says so 
+				 }, 16); 
 				 };
-				//window.location.href="02lab01.html#page02_10";
-			
+
 
 		var index = $(this).index();
 
 		$(this).addClass("active");
 		$("#punkt" + (index - 1)).removeClass("active");
 		$("#punkt" + (index + 1)).addClass("active");
-		// console.log("Index " + index);
-		// console.log("X-achse: " + coords[index].x);
 		drawPoints[clickCount] = coords[index];
 		clickCount++;
 		alertCount++;
@@ -63,37 +60,24 @@ $(document).ready(function() {
 			window.location.reload();
 		}
 		console.log(clickCount);
-		// console.log("drawPoints"+ drawPoints[1]);
 
 		if (!started) {
 			started = true;
 			oldPoint = coords[index];
 			console.log(oldPoint);
 		} else if (clickCount === 2) {
-			// drawPoints[0].x, drawPoints[0].y = drawPoints[1].x,
-			// drawPoints[1].y;
+
 			clickCount = 1;
 			newPoints = oldPoint;
 			drawLine(drawPoints);
-			// zuletzt angeklickter punkt = basispunkt;
 
-			// drawPoints = [];
 		}
 	}
 	
-	/*function endCheck() {
-		console.log("classCheck")
-		
-			alert("weiterleiten!")
-			window.location.href="02lab01.html#page02_10";
-		}; */
+
 		
 	$(".punkt").click(clickHandler);
-	//$("#punkt16").click(endCheck);
-	
-	/* $(".punkt").click(function(){
-   
-	}); */
+
 	
 	
 	$("#punkt0").addClass("active");
@@ -105,7 +89,6 @@ $(document).ready(function() {
 		$(".punkt").off("click");
 
 		context.beginPath();
-		// context.moveTo(points[0].x, points[0].y);
 		context.moveTo(oldPoint.x, oldPoint.y);
 		var endPoint = {
 			x : oldPoint.x,
