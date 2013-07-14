@@ -90,21 +90,21 @@ top:103%;
 #svg {width:100%;}
 #wappenGUN {width:100%;}
 /*===================== 05 ===================== */
-.streichholz table {
+ table {
     border: 0;
 	margin: auto;
 }
-.streichholz #wrapper {
+ #wrapper {
     height: 500px;
 }
-.streichholz  tr:nth-child(2n) img { 
+  tr:nth-child(2n) img { 
     height: 100px;
 }
-.streichholz  td:nth-child(2n) img { 
+  td:nth-child(2n) img { 
     width: 100px;
 }
 
-.streichholz  td.start img{
+ td.start img{
     opacity: 0;
 }
 /*===================== 06 ===================== */
