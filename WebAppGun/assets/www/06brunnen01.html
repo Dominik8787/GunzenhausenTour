@@ -13,7 +13,26 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
-function scan() {$("#qrscan").click(function() {qrscan("testID");});}
+function scan() {$("#qrscan").click(function() {qrscan("testID");});} <!-- Löst QR Code Scanner aus-->
+
+var bg = ["rgb(146, 163, 91)", "rgb(255, 255, 102)", "rgb(149, 179, 215)", "rgb(150, 54, 52)", "rgb(255, 255, 255)" ];
+function setColor(el) {
+	el.colorIdx = el.colorIdx || 0;
+	el.style.backgroundColor = bg[el.colorIdx++ % bg.length];
+}
+function houses() {
+	//alert(bg[0]);
+	//alert($('#h1').css('backgroundColor'));
+	if(
+		$('#h1').css('backgroundColor') == bg[3] && 
+		$('#h2').css('backgroundColor') == bg[1] &&
+		$('#h3').css('backgroundColor') == bg[4] &&
+		$('#h4').css('backgroundColor') == bg[2] &&
+		$('#h5').css('backgroundColor') == bg[0]) {
+			window.location.href='#page06_12'; }
+	else{alert("Das stimmt noch nicht ganz...");}
+}
+
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -206,50 +225,15 @@ window.onload=scan;
 					<li>Das blaue Haus steht zwischen dem grünen Haus und dem weißen Haus</li>
 					<li>Das grüne Haus ist das Letzte in der Straße.</li>
 				</ul>
-				<select name="h1">
-					<option class="opt0" value="0"></option>
-					<option class="opt1" value="1">Weiß</option>
-					<option class="opt2" value="2">Grün</option>
-					<option class="opt3" value="3">Gelb</option>
-					<option class="opt4" value="4">Blau</option>
-					<option class="opt5" value="5">Rot</option><!-- x -->
-				</select>
-				<select name="h2">
-					<option class="opt0" value="0"></option>
-					<option class="opt1" value="1">Weiß</option>
-					<option class="opt2" value="2">Grün</option>
-					<option class="opt3" value="3">Gelb</option><!-- x -->
-					<option class="opt4" value="4">Blau</option>
-					<option class="opt5" value="5">Rot</option>
-				</select>
-				<select name="h3">
-					<option class="opt0" value="0"></option>
-					<option class="opt1" value="1">Weiß</option><!-- x -->
-					<option class="opt2" value="2">Grün</option>
-					<option class="opt3" value="3">Gelb</option>
-					<option class="opt4" value="4">Blau</option>
-					<option class="opt5" value="5">Rot</option>
-				</select>
-				<select name="h4">
-					<option class="opt0" value="0"></option>
-					<option class="opt1" value="1">Weiß</option>
-					<option class="opt2" value="2">Grün</option>
-					<option class="opt3" value="3">Gelb</option>
-					<option class="opt4" value="4">Blau</option><!-- x -->
-					<option class="opt5" value="5">Rot</option>
-				</select>
-				<select name="h5">
-					<option class="opt0" value="0"></option>
-					<option class="opt1" value="1">Weiß</option>
-					<option class="opt2" value="2">Grün</option><!-- x -->
-					<option class="opt3" value="3">Gelb</option>
-					<option class="opt4" value="4">Blau</option>
-					<option class="opt5" value="5">Rot</option>
-				</select>
-				<input type="submit" value="Los!" />
-				
-			<a href="#page06_12">Weiterleitung</a>
-        </div>
+					<div id="houses">
+						<div id="h1" onclick="setColor(this)"></div>
+						<div id="h2" onclick="setColor(this)"></div>
+						<div id="h3" onclick="setColor(this)"></div>
+						<div id="h4" onclick="setColor(this)"></div>
+						<div id="h5" onclick="setColor(this)"></div>
+					</div>
+					<div data-theme="a" data-role="button" style="clear:both" onclick="houses()">Stimmt so!</div>				</div>
+			<!--<a href="#page06_12">Weiterleitung</a>-->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
@@ -280,8 +264,10 @@ window.onload=scan;
         <div class="sbText">
             <div>
                 <p>Das werdet ihr schon noch sehen!</p>
-				<p>Jedenfalls solltet ihr euch die Reihenfolge der Häuser merken.</p>
-				<p>Oh, und seht euch in der Nähe des Glockenturms um.</p>
+				<p>Jedenfalls solltet ihr euch die Reihenfolge der Häuser merken!</p>
+				<br>
+				<p>Zum Markplatz müsst ihr hier nur links den Hafnermarkt runter.</p>
+				<p>Oh, und seht euch in der Nähe des Glockenturms um!</p>
             </div>
             <a href="#page06_14" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>

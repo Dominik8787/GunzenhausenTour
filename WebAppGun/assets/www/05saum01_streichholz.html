@@ -11,6 +11,7 @@
 <script src="js/jquery.mobile-1.3.0.min.js"></script>
 <script src="cordova.js"></script>
 <script src="js/barcodescanner.js"></script>
+<script src="js/streichholz.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
 function scan() {$("#qrscan").click(function() {qrscan("testID");});}
@@ -27,8 +28,69 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Schweine im Gatter</h1>
-            <p>Rätseltext</p>
-			<a href="05saum01.html#page05_09">braucht eine Weiterleitung/ einen Weiter-Button zu 05saum01.html#page05_09</a></p>
+            <p>"Ein Schweinehändler hat 5 Schweine.<br>Leider hat der Stand, der ihm auf dem Markt zugewiesen wurde, nur 4 Gatter, und es ist absolut undenkbar, zwei Schweine in ein Gatter zu sperren.</p>
+			<p>Glücklicherweise ist es ziemlich leicht, einzelne Zaun-Elemente umzustellen...</p>
+			<br>
+			<p>Hier, ich verbildliche euch das Ganze mal mit Streichhölzern!"<br></p>
+			
+<!--			<div class="raetsel streichholz">-->
+				<div id="wrapper">
+					<table>
+						<tr>
+							<td></td>
+							<td><img class="holz a" src="img/streichholz2.gif" /></td>
+							<td></td>
+							<td><img class="holz b" src="img/streichholz2.gif" /></td>
+							<td></td>
+						</tr> 
+						<tr>
+							<td><img class="holz a" src="img/streichholz.gif" /></td>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz.gif" /></td>
+							<td></td>
+							<td><img class="holz b" src="img/streichholz.gif" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz2.gif" /></td>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz2.gif" /></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td class="start"><img class="holz x" src="img/streichholz.gif"/></td>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz.gif" /></td>
+							<td></td>
+							<td class="start"><img class="holz x" src="img/streichholz.gif" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz2.gif" /></td>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz2.gif" /></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><img class="holz c" src="img/streichholz.gif" /></td>
+							<td></td>
+							<td><img class="holz x" src="img/streichholz.gif" /></td>
+							<td></td>
+							<td><img class="holz d" src="img/streichholz.gif" /></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><img class="holz c" src="img/streichholz2.gif" /></td>
+							<td></td>
+							<td><img class="holz d" src="img/streichholz2.gif" /></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+<!--			</div>-->
+			
+			
+			<!--<a href="05saum01.html#page05_09">braucht eine Weiterleitung/ einen Weiter-Button zu 05saum01.html#page05_09</a></p>-->
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">

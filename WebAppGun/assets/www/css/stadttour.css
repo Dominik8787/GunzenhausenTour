@@ -75,11 +75,10 @@ top:103%;
 .inhalt.left .weiterButton {right:15%}
 .inhalt.right .weiterButton {left:15%}
 
+/*==================== Einzelne Elemente zu den Rätseln ==================================*/
 .raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center; height: 90%}
 .raetsel_text h1{margin-bottom: 25px}
 .raetsel_text ul {font-size: 13px; margin-bottom: 20px; text-align: left}
-
-/*==================== Einzelne Elemente zu den Rätseln ==================================*/
 
 /*===================== 00 ===================== */
 #map_geo img {width: 75%; display:block; margin:auto; border: 1px solid #555}
@@ -90,7 +89,27 @@ top:103%;
 #wappenwrapper{ width:100%; height:auto;}
 #svg {width:100%;}
 #wappenGUN {width:100%;}
+/*===================== 05 ===================== */
+ table {
+    border: 0;
+	margin: auto;
+}
+ #wrapper {
+    height: 500px;
+}
+  tr:nth-child(2n) img { 
+    height: 100px;
+}
+  td:nth-child(2n) img { 
+    width: 100px;
+}
 
+ td.start img{
+    opacity: 0;
+}
+/*===================== 06 ===================== */
+#houses {height: 10%; margin: 0 0 30px}
+#houses div{background-color: #fff; float: left; height: 100%; width: 13%; margin-left: 5%; border: 1px solid #000;}
 
 /* ======================= Mehr Informationen ======================*/
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px}
