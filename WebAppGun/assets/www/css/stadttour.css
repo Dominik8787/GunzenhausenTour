@@ -41,6 +41,7 @@ background: rgba(255,255,255,1);
 }
 .inhalt.left .sbText{right: 3%;}
 .inhalt.right .sbText{left: 3%;}
+.inhalt.up .sbText{left: 30%; top: 3%}
 
 .sbText:after {
 content: "";
@@ -53,6 +54,7 @@ top: 70%;
 }
 .inhalt.left .sbText:after {background-image: url(../img/haken_links.png); left: -18px}
 .inhalt.right .sbText:after {background-image: url(../img/haken_rechts.png); right: -20px;}
+.inhalt.up .sbText:after {background-image: url(../img/haken_oben.png); left: 40%; top:-8.6%}
 
 /* ------------------------ Alternative CSS Sprechblase Ende ------------------*/
 /* sdnfasldf*/
@@ -71,7 +73,7 @@ position:absolute;
 top:103%;
 }
 
-
+.inhalt.up .weiterButton {left:27%}
 .inhalt.left .weiterButton {right:15%}
 .inhalt.right .weiterButton {left:15%}
 
