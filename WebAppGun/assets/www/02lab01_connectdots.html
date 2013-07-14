@@ -6,12 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
 <link rel="stylesheet" href="css/stadttour.css" />
+<link rel="stylesheet" href="css/connectTheDotsCss.css" />
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/stadttour.js"></script>
 <script src="js/jquery.mobile-1.3.0.min.js"></script>
 <script src="cordova.js"></script>
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
+
 <script> <!-- Löst QR Code Scanner aus-->
 function scan() {$("#qrscan").click(function() {qrscan("testID");});}
 window.onload=scan;
@@ -27,121 +29,16 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Wer kann helfen?</h1>
-            <p>Verbinde die Punkte, um einen Hinweis zu bekommen!</p>
+            <p>Verbinde die <strong>rot leuchtenden Punkte</strong>, um einen Hinweis zu bekommen!</p>
 			﻿<!--
 To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <style>
-            #vogel {
-                background-image: url(img/punkte.jpg);
-                background-size: 100% 100%;
-                width: 320px;
-                height: 480px;
-            }
-            #overlay, #canvas {
-                width: 320px;
-                height: 480px;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-            #punkt0 {                
-                top: 403px;
-                left: 130px;                
-            }
-            #punkt1 {                
-                top: 300px;
-                left: 150px;                
-            }
-            #punkt2 {
-                top: 251px;
-                left: 148px;
-            }
-            #punkt3 {
-                top: 165px;
-                left: 97px;
-            }
-            #punkt4 {
-                left: 118px;
-                top: 83px;
-            }
-            #punkt5 {
-                left: 60px;
-                top: 119px;
-            }
-            #punkt6 {
-                left: 103px;
-                top: 55px;
-            }
-            #punkt7 {
-                left: 114px;
-                top: 27px;
-            }
-            #punkt8 {
-                left: 150px;
-                top: 31px;
-            }
-            #punkt9 {
-                left: 149px;
-                top: 81px;
-            }
-            #punkt10 {
-                left: 137px;
-                top: 111px;
-            }
-            #punkt11 {
-                left: 242px;
-                top: 162px;
-            }
-            #punkt12 {
-                left: 285px;
-                top: 242px;
-            }
-            #punkt13 {
-                left: 259px;
-                top: 266px;
-            }
-            #punkt14 {
-                left: 200px;
-                top: 254px;
-            }
-            #punkt15 {
-                left: 201px;
-                top: 309px;
-            }
-            #punkt16 {
-                left: 184px;
-                top: 402px;
-            }
-            .punkt {
-                position:absolute;height:12px;width:12px;background-color:#000;border-radius:10px;float:left;
-            }
 
-            .active {
-                -webkit-animation: dotBackgroundColor .7s linear infinite alternate;
-                -moz-animation: dotBackgroundColor .7s linear infinite alternate;
-                -o-animation: dotBackgroundColor .7s linear infinite alternate;
-                animation: dotBackgroundColor .7s linear infinite alternate;
-                background-color:#f00;
-            }
-            @-webkit-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @-moz-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @-o-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
-            @keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+   <script src="js/RequestAnimationFrame.js"></script>
+<script src="js/tween.min.js"></script>
+<script src="js/connectTheDots.js"></script>
 
-            @-webkit-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @-moz-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @-o-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-            @keyframes numberColor{ from{color:#f00;}to{color:#000;}}
-        </style>
-    </head>
-    <body>
         <canvas id="canvas" width="320" height="480"></canvas>
         <div id="overlay">
             <div id="punkt0" class="punkt"></div>
@@ -163,122 +60,9 @@ and open the template in the editor.
             <div id="punkt16" class="punkt"></div>
         </div>
        
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="js/RequestAnimationFrame.js"></script>
-        <script src="js/tween.min.js"></script>
-        <script>
-          
-            
-            var canvas = document.getElementById("canvas");
-            var context = canvas.getContext("2d");
-            context.fillStyle = 'black';
-            context.strokeWidth = 5;
-
-            var started = false;
-            var coords = [];
-            var clickCount = 0;
-            var alertCount = 0;
-            var tween = null;
-            var oldPoint;
-            var newPoints = [];
-            var drawPoints = [];
-
-            var Punkt = {
-                x: 0,
-                y: 0
-            };
-         
-                
-         
-            for (var i = 0; i !== 16; i++) {
-
-                var p = Object.create(Punkt);
-                p.x = parseInt($("#punkt" + i).css("left")) + 5;
-                p.y = parseInt($("#punkt" + i).css("top")) + 5;
-                coords.push(p);
-
-            }
-
-            function clickHandler() {
-                
-                var index = $(this).index();
-                
-                $(this).addClass("active");
-                $("#punkt" + (index - 1)).removeClass("active");
-                $("#punkt" + (index + 1)).addClass("active");
-                //console.log("Index " + index);
-                //console.log("X-achse: " + coords[index].x);
-                drawPoints[clickCount] = coords[index];
-                clickCount++;
-                alertCount++;
-                if (alertCount === 20) {
-                    alert("folge den rot leuchtenden Punkten!");
-                    window.location.reload();
-                }
-                console.log(clickCount);
-                //console.log("drawPoints"+ drawPoints[1]);
-
-                if(!started) {
-                    started = true;
-                    oldPoint = coords[index];
-                    console.log(oldPoint);
-                } else
-                if (clickCount === 2) { 
-                    //drawPoints[0].x, drawPoints[0].y = drawPoints[1].x, drawPoints[1].y;
-                    clickCount = 1;
-                    newPoints = oldPoint;
-                    drawLine(drawPoints);
-                   // zuletzt angeklickter punkt = basispunkt;
-                  
-    
-                    //drawPoints = [];
-                }
-            }
-
-            $(".punkt").click(clickHandler);
-            $("#punkt0").addClass("active");
-            
-            function drawLine(points) {
-                $(".punkt").off("click");
-
-                context.beginPath();
-               // context.moveTo(points[0].x, points[0].y);
-                context.moveTo(oldPoint.x, oldPoint.y);
-                var endPoint = {
-                    x: oldPoint.x,
-                    y: oldPoint.y
-                };
-
-                tween = new TWEEN.Tween(endPoint)
-                        .to({x: points[1].x, y: points[1].y}, 1000)
-                        .easing(TWEEN.Easing.Linear.None)
-                        .onUpdate(function() {
-
-                    context.lineTo(endPoint.x, endPoint.y);
-                    context.closePath();
-                    context.stroke();
-
-                }).start();
-
-                tween.onComplete(function() {
-                    $(".punkt").click(clickHandler);
-                });
-                oldPoint = points[1];
-            }
-
-            function animate() {
-                requestAnimationFrame(animate);
-              
-                TWEEN.update();
-            }
-            ;
-
-            animate();
-
-        </script>
-    </body>
-</html>
- <a href="02lab01.html#page02_10">braucht eine Weiterleitung/ einen Weiter-Button zu 02lab01.html#page02_10</a></p>
+  
+      
+ <!-- <a href="02lab01.html#page02_10">braucht eine Weiterleitung/ einen Weiter-Button zu 02lab01.html#page02_10</a></p> -->
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
