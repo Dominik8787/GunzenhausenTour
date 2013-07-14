@@ -1,0 +1,101 @@
+ #vogel {
+                background-image: url(img/punkte.jpg);
+                background-size: 100% 100%;
+                width: 320px;
+                height: 480px;
+            }
+            #overlay, #canvas {
+                min-width: 100%;
+                min-height: 90%;
+                position: absolute;
+                top: 1;
+                left: 0;
+            }
+             #punkt0 {                
+                top: 403px;
+                left: 130px;                
+            }
+            #punkt1 {                
+                top: 300px;
+                left: 150px;                
+            }
+            #punkt2 {
+                top: 251px;
+                left: 148px;
+            }
+            #punkt3 {
+                top: 165px;
+                left: 97px;
+            }
+            #punkt4 {
+                left: 118px;
+                top: 83px;
+            }
+            #punkt5 {
+                left: 60px;
+                top: 119px;
+            }
+            #punkt6 {
+                left: 103px;
+                top: 55px;
+            }
+            #punkt7 {
+                left: 114px;
+                top: 27px;
+            }
+            #punkt8 {
+                left: 150px;
+                top: 31px;
+            }
+            #punkt9 {
+                left: 149px;
+                top: 81px;
+            }
+            #punkt10 {
+                left: 137px;
+                top: 111px;
+            }
+            #punkt11 {
+                left: 242px;
+                top: 162px;
+            }
+            #punkt12 {
+                left: 285px;
+                top: 242px;
+            }
+            #punkt13 {
+                left: 259px;
+                top: 266px;
+            }
+            #punkt14 {
+                left: 200px;
+                top: 254px;
+            }
+            #punkt15 {
+                left: 201px;
+                top: 309px;
+            }
+            #punkt16 {
+                left: 184px;
+                top: 402px;
+            }
+            .punkt {
+                position:absolute;height:12px;width:12px;background-color:#000;border-radius:10px;float:left;
+            }
+
+            .active {
+                -webkit-animation: dotBackgroundColor .7s linear infinite alternate;
+                -moz-animation: dotBackgroundColor .7s linear infinite alternate;
+                -o-animation: dotBackgroundColor .7s linear infinite alternate;
+                animation: dotBackgroundColor .7s linear infinite alternate;
+                background-color:#f00;
+            }
+            @-webkit-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+            @-moz-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+            @-o-keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+            @keyframes dotBackgroundColor{ from{background-color:#f00;}to{background-color:#000;}}
+
+            @-webkit-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
+            @-moz-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
+            @-o-keyframes numberColor{ from{color:#f00;}to{color:#000;}}
+            @keyframes numberColor{ from{color:#f00;}to{color:#000;}}
