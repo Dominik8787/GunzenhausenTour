@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Stadttour</title>
+<title>Wappenrätsel - Stadttour</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
 <link rel="stylesheet" href="css/stadttour.css" />
@@ -16,7 +16,12 @@
 function scan() {$("#qrscan").click(function() {qrscan("testID");});}
 window.onload=scan;
 </script>
-<style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
+<style type="text/css">.inhalt {background-image: url(img/hg/hg05.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
+<style type="text/css">
+#wappenwrapper{ width:100%;}
+.svg {width:90%;}
+
+</style>
 </head>
 
 <body>
@@ -27,6 +32,11 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Wappen Rätsel</h1>
+			<div id="wappenwrapper">
+			 <object data="js/wappenGUN.svg" type="image/svg+xml" class="svg"> 
+				<h1>uups</h1>
+			 </object>
+			</div>
 			<a href="04turm04#page04_4_03">braucht eine Weiterleitung/ einen Weiter-Button zu 04turm04#page04_4_03</a></p>
             <p></p>
         </div>

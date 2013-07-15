@@ -20,7 +20,7 @@ p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgr��e wieder entfernen!*/
 	background-attachment: fixed;
 	height: 100%;
 	padding: 0;}
-
+	
 
 /* ======================= Hauptseiten ======================*/
 
@@ -87,10 +87,7 @@ top:103%;
 /*===================== 04-1 ===================== */
 .btn_group {margin: 50% 0 0;}
 .btn_group a{margin: 0 0 25px;}
-/*===================== 04-3 ===================== */
-#wappenwrapper{ width:100%; height:auto;}
-#svg {width:100%;}
-#wappenGUN {width:100%;}
+
 /*===================== 05 ===================== */
  #holzwrapper {
     height: 100%;
