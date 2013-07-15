@@ -21,13 +21,32 @@
 </head>
 
 <body>
-
+//Momentan ist die richtige Reihenfolge 1,2,3,4,5
+//Um die richtige Reihenfolge festzlegen müssen hier die ids getauscht werden.
+	<audio id="a1">
+		<source src="audio/a1.mp3">
+	</audio>
+	<audio id="a2">
+		<source src="audio/a2.mp3">
+	</audio>
+	<audio id="a3">
+		<source src="audio/a3.mp3">
+	</audio>
+	<audio id="a4">
+		<source src="audio/a4.mp3">
+	</audio>
+	<audio id="a5">
+		<source src="audio/a5.mp3">
+	</audio>
+	<audio id="all">
+		<source src="audio/all.mp3">
+	</audio>
 	<!--Rätselseite -->
 	<div data-role="page" id="page07_r_01" class="page">
 		<div class="inhalt left" data-role="content">
 			<div class="sbText">
 				<div>
-					<p>Probier doch mal aus!</p>
+					<p>Probier es doch mal aus!</p>
 					<p>Scanne die Codes in der richtigen Reihenfolge um die Glocken
 						zum klingen zu bringen!</p>
 				</div>
@@ -53,6 +72,9 @@
 					<p>Nein, nein, nein!</p>
 					<p>Das scheint mir nicht zu stimmen. Versuchs nochmal von
 						vorne.</p>
+					<audio>
+						<source src="audio/test.wav" />
+					</audio>
 				</div>
 				<a href="#page07_r_falsch" id="qrscan1" data-role="button"
 					data-theme="a">QR-Code scannen!</a>
@@ -164,8 +186,8 @@
 					<p>Ja!</p>
 					<p>Eine so schöne Abfolge!</p>
 				</div>
-				<a href="07glocken01.html#page07_03" data-prefetch="true" class="weiterButton"
-					data-role="button" data-theme="a">Weiter</a>
+				<a href="07glocken01.html#page07_03" data-prefetch="true"
+					class="weiterButton" data-role="button" data-theme="a">Weiter</a>
 				<!-- Link zur nächsten Seite -->
 			</div>
 			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
