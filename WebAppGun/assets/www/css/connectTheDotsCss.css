@@ -92,6 +92,10 @@
 	float: left;
 }
 
+.unclickable {
+               pointer-events: none;
+            }
+
 .active {
 	-webkit-animation: dotBackgroundColor .7s linear infinite alternate;
 	-moz-animation: dotBackgroundColor .7s linear infinite alternate;
@@ -100,8 +104,15 @@
 	background-color: #f00;
 }
 
-@
--webkit-keyframes dotBackgroundColor {
+@-webkit-keyframes dotBackgroundColor {
+	from {background-color: #f00;
+}
+
+to {background-color: #000;
+}
+
+}
+@-moz-keyframes dotBackgroundColor {
 	from {background-color: #f00;
 }
 
@@ -110,8 +121,7 @@ to {
 }
 
 }
-@
--moz-keyframes dotBackgroundColor {
+@-o-keyframes dotBackgroundColor {
 	from {background-color: #f00;
 }
 
@@ -120,8 +130,7 @@ to {
 }
 
 }
-@
--o-keyframes dotBackgroundColor {
+@keyframes dotBackgroundColor {
 	from {background-color: #f00;
 }
 
@@ -130,18 +139,7 @@ to {
 }
 
 }
-@
-keyframes dotBackgroundColor {
-	from {background-color: #f00;
-}
-
-to {
-	background-color: #000;
-}
-
-}
-@
--webkit-keyframes numberColor {
+@-webkit-keyframes numberColor {
 	from {color: #f00;
 }
 
@@ -150,8 +148,7 @@ to {
 }
 
 }
-@
--moz-keyframes numberColor {
+@-moz-keyframes numberColor {
 	from {color: #f00;
 }
 
@@ -160,8 +157,7 @@ to {
 }
 
 }
-@
--o-keyframes numberColor {
+@-o-keyframes numberColor {
 	from {color: #f00;
 }
 
@@ -170,8 +166,7 @@ to {
 }
 
 }
-@
-keyframes numberColor {
+@keyframes numberColor {
 	from {color: #f00;
 }
 
