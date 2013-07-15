@@ -8,7 +8,7 @@ body {overflow-y: hidden;}
 div.page {padding: 0!important;}
 /* =================================================================*/
 h1, h2, h3, h4, h5, h6 {margin:0}
-p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgröße wieder entfernen!*/
+p {margin: 0 0 5px; font-size: 13px} /*ST: Schriftgrï¿½ï¿½e wieder entfernen!*/
 /* =================================================================*/
 .inhalt {
 	-webkit-background-size: cover;
@@ -77,7 +77,7 @@ top:103%;
 .inhalt.left .weiterButton {right:15%}
 .inhalt.right .weiterButton {left:15%}
 
-/*==================== Einzelne Elemente zu den Rätseln ==================================*/
+/*==================== Einzelne Elemente zu den Rï¿½tseln ==================================*/
 .raetsel_text {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px; text-align: center; height: 90%}
 .raetsel_text h1{margin-bottom: 25px}
 .raetsel_text ul {font-size: 13px; margin-bottom: 20px; text-align: left}
@@ -92,21 +92,21 @@ top:103%;
 #svg {width:100%;}
 #wappenGUN {width:100%;}
 /*===================== 05 ===================== */
- table {
+ #holzwrapper {
+    height: 100%;
+}
+  #holzwrapper table {
     border: 0;
 	margin: auto;
 }
- #wrapper {
-    height: 500px;
-}
-  tr:nth-child(2n) img { 
+  #holzwrapper tr:nth-child(2n) img { 
     height: 100px;
 }
-  td:nth-child(2n) img { 
+  #holzwrapper td:nth-child(2n) img { 
     width: 100px;
 }
 
- td.start img{
+  #holzwrapper td.start img{
     opacity: 0;
 }
 /*===================== 06 ===================== */
@@ -127,7 +127,7 @@ position: fixed;
 bottom: 0;
 width: 100%;
 padding: 6px 10px 0;
-height: 9%; /*ST: Habe die Höhe fixiert, damit der Footer auch angezeigt wird, wenn keine Buttons vorhanden sind. Bsp. auf Hinweisseiten */
+height: 9%; /*ST: Habe die Hï¿½he fixiert, damit der Footer auch angezeigt wird, wenn keine Buttons vorhanden sind. Bsp. auf Hinweisseiten */
 }
 
 .footer a {

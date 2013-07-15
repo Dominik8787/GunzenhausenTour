@@ -12,9 +12,11 @@ var x = 7, a = 2, b = 2, c = 2, d = 2;
 
 $(document).ready(function()
 {
-    var h = $("#wrapper").height();
-    $("tr:nth-child(2n) img").css("height", h/4);
-    $("td:nth-child(2n) img").css("width", h/4);
+    var h = $("#holzwrapper").width();
+    alert (h);
+    $("#holzwrapper tr:nth-child(2n) img").css("height", h/6);
+    $("#holzwrapper td:nth-child(2n) img").css("width", h/6);
+    alert($("td:nth-child(2n) img").css("width"));
     init();
     $(".holz").click(function() {
         if (vorrat !== 1 && $(this).css("opacity") === "1") { //nehmen
