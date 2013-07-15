@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Stadttour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" href="css/stadttour.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/stadttour.js"></script>
+<script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/barcodescanner.js"></script>
+<script src="js/qr_scan_glocken.js"></script>
+<style type="text/css">
+.inhalt {
+	background-image: url(img/hg/hg01.jpg);
+}
+</style>
+<!-- Individuelles Hintergrundbild für Station fest -->
+</head>
+
+<body>
+//Momentan ist die richtige Reihenfolge 1,2,3,4,5
+//Um die richtige Reihenfolge festzlegen müssen hier die ids getauscht werden.
+	<audio id="a1">
+		<source src="audio/a1.mp3">
+	</audio>
+	<audio id="a2">
+		<source src="audio/a2.mp3">
+	</audio>
+	<audio id="a3">
+		<source src="audio/a3.mp3">
+	</audio>
+	<audio id="a4">
+		<source src="audio/a4.mp3">
+	</audio>
+	<audio id="a5">
+		<source src="audio/a5.mp3">
+	</audio>
+	<audio id="all">
+		<source src="audio/all.mp3">
+	</audio>
+	<!--Rätselseite -->
+	<div data-role="page" id="page07_r_01" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Probier es doch mal aus!</p>
+					<p>Scanne die Codes in der richtigen Reihenfolge um die Glocken
+						zum klingen zu bringen!</p>
+				</div>
+				<a href="#page07_r_01" id="qrscan1" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:falsch -->
+	<div data-role="page" id="page07_r_falsch" class="page">
+		<div class="inhalt right" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Nein, nein, nein!</p>
+					<p>Das scheint mir nicht zu stimmen. Versuchs nochmal von
+						vorne.</p>
+					<audio>
+						<source src="audio/test.wav" />
+					</audio>
+				</div>
+				<a href="#page07_r_falsch" id="qrscan1" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf3.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:Ton1 richtig -->
+	<div data-role="page" id="page07_r_02" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Ja!</p>
+					<p>Mach weiter so. Das klingt gut.</p>
+				</div>
+				<a href="#page07_r_02" id="qrscan2" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:Ton2 richtig -->
+	<div data-role="page" id="page07_r_03" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Ja!</p>
+					<p>Nur weiter. Nur weiter.</p>
+				</div>
+				<a href="#page07_r_03" id="qrscan3" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:Ton3 richtig -->
+	<div data-role="page" id="page07_r_04" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Ja!</p>
+					<p>Das klingt in meinen markgräflichen Ohren schon ganz gut.</p>
+				</div>
+				<a href="#page07_r_04" id="qrscan4" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:Ton4 richtig -->
+	<div data-role="page" id="page07_r_05" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Ja!</p>
+					<p>Herrlich. Nun noch den letzten!</p>
+				</div>
+				<a href="#page07_r_05" id="qrscan5" data-role="button"
+					data-theme="a">QR-Code scannen!</a>
+				<!-- Button zum Auslösen der QR-Scan Funktion -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+	<!--Subpage:Ton5 richtig -->
+	<div data-role="page" id="page07_r_05" class="page">
+		<div class="inhalt left" data-role="content">
+			<div class="sbText">
+				<div>
+					<p>Ja!</p>
+					<p>Eine so schöne Abfolge!</p>
+				</div>
+				<a href="07glocken01.html#page07_03" data-prefetch="true"
+					class="weiterButton" data-role="button" data-theme="a">Weiter</a>
+				<!-- Link zur nächsten Seite -->
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+			<!-- Charakterbild -->
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+
+	<!-- Hilfeseite -->
+	<div data-role="page" id="help" class="page">
+		<div class="inhalt" data-role="content">
+			<div class="sbText">
+				<p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis
+					helfen...</p>
+				<p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+			<a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis,
+				bitte!</a> <a href="notify.html" data-role="button">Problem melden</a>
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+
+	<!-- Hinweisseite -->
+	<div data-role="page" id="hint" class="page">
+		<div class="inhalt" data-role="content">
+			<div class="sbText">
+				<p>Hinweistext</p>
+			</div>
+			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+		</div>
+		<!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div>
+		<!-- /footer-->
+	</div>
+	<!-- /page -->
+
+</body>
+</html>

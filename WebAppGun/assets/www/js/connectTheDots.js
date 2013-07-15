@@ -52,6 +52,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		$("#punkt" + (index - 1)).removeClass("active");
 		$("#punkt" + (index + 1)).addClass("active");
+		$("#punkt" + (index + 1)).removeClass("unclickable");
 		drawPoints[clickCount] = coords[index];
 		clickCount++;
 		alertCount++;
@@ -76,10 +77,7 @@ $(document).ready(function() {
 	
 
 		
-	$(".punkt").click(clickHandler);
-
-	
-	
+	$(".punkt").click(clickHandler);	
 	$("#punkt0").addClass("active");
 	
 	
