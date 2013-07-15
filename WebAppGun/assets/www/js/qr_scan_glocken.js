@@ -5,8 +5,6 @@ $(document).ready(function() {
 	// Um die richtige Reihenfolge festzulegen, die Namen g1, g2, g3,...
 	// entsprechend tauschen.
 	$("#qrscan1").click(function() {
-		$("audio#a1")[0].play();
-		$("audio#all")[0].play();
 		qrscan("g1");
 		link = "#page07_r_02";
 	});
