@@ -1,6 +1,7 @@
 function onDeviceReady() {
 	item_value = window.localStorage.getItem( 'qrcode' );	
 	alert(item_value)
+	//test
 }
 
 /* var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
