@@ -13,10 +13,8 @@ var x = 7, a = 2, b = 2, c = 2, d = 2;
 $(document).ready(function()
 {
     var h = $("#holzwrapper").width();
-    alert (h);
     $("#holzwrapper tr:nth-child(2n) img").css("height", h/6);
     $("#holzwrapper td:nth-child(2n) img").css("width", h/6);
-    alert($("td:nth-child(2n) img").css("width"));
     init();
     $(".holz").click(function() {
         if (vorrat !== 1 && $(this).css("opacity") === "1") { //nehmen
@@ -29,9 +27,6 @@ $(document).ready(function()
             i = -1;
             tracker($(this).attr("class"), -i);
         }
-    });
-    $("button").click(function() {
-        init();
     });
 });
 
@@ -87,7 +82,7 @@ function gibAnweisung(move) {
 function tracker(group, i) {
     move += 1;
     gibAnweisung(move);
-    vorrat += i;
+    vorrat -= i;
     switch (group) {
         case "holz x":
             x += i;
