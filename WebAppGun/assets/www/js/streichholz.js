@@ -62,13 +62,13 @@ function ende() {
 function gibAnweisung(move) {
     switch (move) {
         case 0:
-            $("#anweisung").html("Tippe das Streichholz an, das du verschieben mÃ¶chtest!");
+            $("#anweisung").html("Tippe das Gatter an, das du verschieben möchtest!");
             break;
         case 1:
             $("#anweisung").html("Tippe an die leere Stelle, wohin du das Streichholz verschieben willst!");
             break;
         case 2:
-            $("#anweisung").html("Tippe das zweite Streichholz an, das du verschieben mÃ¶chtest!");
+            $("#anweisung").html("Tippe das zweite Gatter an, das du verschieben möchtest!");
             break;
         case 3:
             $("#anweisung").html("Tippe an die leere Stelle, wohin du das Streichholz verschieben willst!");
