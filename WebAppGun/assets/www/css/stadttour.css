@@ -117,7 +117,9 @@ top:103%;
 #felder div{background-color: #fff; height: 25px; width: 50%;; margin: 2% auto; border: 1px solid #000; padding: 3px;}
 
 /* ======================= Mehr Informationen ======================*/
-.infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 3px}
+.infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 5px; min-height: 100%}
+.infotext h2 {text-align:center; padding: 10px 10px 20px }
+.infotext p {padding: 0 10px}
 
 /* ======================= Alert ======================*/
 .alert {background:  rgba(255,0,0,0.2); border: 3px solid #ff0000; margin: 10px auto 0; width: 80%; color: #000; padding: 5px}
