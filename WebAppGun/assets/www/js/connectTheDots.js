@@ -33,7 +33,7 @@ $(document).ready(function() {
 		//Check ob das Spiel beendet ist (punkt 16 hat KLasse active und wird noch mal geklickt)
 		 if ($('#punkt16').is('.active') ) {
 			 	
-				 alert("weiterleiten!")
+				 //alert("weiterleiten!")
 				 $("#WeiterButtonConnectTheDots").show();
 				 context.globalAlpha = 0;
 				 var imgFadeInter = setInterval(function(){
