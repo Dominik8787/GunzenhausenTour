@@ -105,5 +105,6 @@
     <plugins>
         <plugin name="BarcodeScanner" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
         <plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
+        <plugin name="Media" value="org.apache.cordova.AudioHandler" />
     </plugins>
 </widget>

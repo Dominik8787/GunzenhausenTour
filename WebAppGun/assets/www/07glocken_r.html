@@ -18,29 +18,14 @@
 }
 </style>
 <!-- Individuelles Hintergrundbild für Station fest -->
+<script> <!-- Löst QR Code Scanner aus-->
+/* function scan() {
+	$("#qrscan1").click(function() {alert("Also hier!");});}
+window.onload=scan; */
+</script>
 </head>
 
 <body>
-//Momentan ist die richtige Reihenfolge 1,2,3,4,5
-//Um die richtige Reihenfolge festzlegen müssen hier die ids getauscht werden.
-	<audio id="a1">
-		<source src="audio/a1.mp3">
-	</audio>
-	<audio id="a2">
-		<source src="audio/a2.mp3">
-	</audio>
-	<audio id="a3">
-		<source src="audio/a3.mp3">
-	</audio>
-	<audio id="a4">
-		<source src="audio/a4.mp3">
-	</audio>
-	<audio id="a5">
-		<source src="audio/a5.mp3">
-	</audio>
-	<audio id="all">
-		<source src="audio/all.mp3">
-	</audio>
 	<!--Rätselseite -->
 	<div data-role="page" id="page07_r_01" class="page">
 		<div class="inhalt left" data-role="content">
@@ -49,9 +34,10 @@
 					<p>Probier es doch mal aus!</p>
 					<p>Scanne die Codes in der richtigen Reihenfolge um die Glocken
 						zum klingen zu bringen!</p>
+						<p class="holz">JETZT MUSS ES ABER MAL KLAPPEN!</p>
 				</div>
-				<a href="#page07_r_01" id="qrscan1" data-role="button"
-					data-theme="a">QR-Code scannen!</a>
+				<a href="#page07_r_01" id="qrscan1" class="weiterButton" data-role="button"
+					data-theme="a" rel="external">Scannen!</a>
 				<!-- Button zum Auslösen der QR-Scan Funktion -->
 			</div>
 			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
@@ -59,7 +45,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -86,7 +72,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -109,7 +95,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -132,7 +118,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -155,7 +141,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -174,12 +160,12 @@
 				<!-- Button zum Auslösen der QR-Scan Funktion -->
 			</div>
 			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
-			
+
 			<!-- Charakterbild -->
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -202,7 +188,7 @@
 		</div>
 		<!-- /content-->
 		<div class="footer ui-bar" data-role="footer" data-position="fixed">
-		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
+			<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
 		</div>
 		<!-- /footer-->
 	</div>
@@ -233,7 +219,8 @@
 	<div data-role="page" id="hint" class="page">
 		<div class="inhalt left" data-role="content">
 			<div class="sbText">
-				<p>Nicht vergessen...die Reihenfolge war Rot, Gelb, Braun, Blau und Grün!</p>
+				<p>Nicht vergessen...die Reihenfolge war Rot, Gelb, Braun, Blau
+					und Grün!</p>
 			</div>
 			<img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
 		</div>
