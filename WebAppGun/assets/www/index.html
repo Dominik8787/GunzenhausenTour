@@ -1,9 +1,3 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
-Version: 0.2
-More info: http://view.jquerymobile.com/1.3.0/
--->
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,64 +8,87 @@ More info: http://view.jquerymobile.com/1.3.0/
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.0.min.js"></script>
 <script src="js/statussave.js"> </script>
-
 <!--  entfernt, da jQuery noch nicht geladen war wenn onDeviceReady gecalled wurde -->
 <!--  <script>document.addEventListener("deviceready", onDeviceReady(), false)</script> -->
+
+<style type="text/css">
+            #navi {position:absolute;
+				bottom:5%;
+				width: 90%;
+				margin: 0 5%;
+            }
+			.chara {
+			width: 40%;
+			height: auto;
+			position: fixed;
+			top: 25%;
+			}
+			.chara {left:30%}
+			
+			div.page {padding: 0!important;}
+			
+			#ueber {
+border: 2px solid black;
+width:80%;
+margin: 5%;
+padding: 5%;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+background: rgba(255,255,255,1);
+}
+
+p {font-size: 13px} 
+
+#begruessung {text-align: center;}
+
+        </style>
+
 </head>
 <body>
-	<div data-role="page">
+	<div data-role="page" id="start_01">
 
 		<div data-role="header">
-			<h1>Stadtrundgang</h1>
+			<h1>Stadttour</h1>
 		</div>
 		<!-- /header -->
 
 		<div data-role="content">
-			<p>Herzlich Willkommen zum interaktiven Stadtrundgang der Stadt
+			<p id="begruessung">Herzlich Willkommen zur <br/>interaktiven Stadttour von
 				Gunzenhausen</p>
 		</div>
-		<!-- /content -->
-		 <a data-role="button" target="_blank" data-theme="b" href="00start01.html">
-            Start
-        </a>
-        <a data-role="button" data-theme="b" href="#page1">
-            Über
-        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="01geo01.html"> Station 1(geodätischer Pkt)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="02lab01.html"> Station 2(Labyrinth)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="03storch01.html"> Station 3(Storchenturm)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="04turm01.html"> Station 4(Am Färberturm)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="04turm02.html"> Station 4(Im Färberturm)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="04turm03.html"> Station 4(Schlüsselrätsel im Färberturm)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="05saum01.html"> Station 5(Saumarkt)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="05saum02.html"> Station 5(Federn am Saumarkt)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="06brunnen01.html"> Station 6(Brunnen)        </a>
-       	<a data-role="button" target="_blank" data-theme="b" href="07glocken01.html"> Station 7(Glockenturm)        </a>
-       	
-       	<a data-role="button" target="_blank" data-theme="b" href="04turm04.html#page04_4_09">
-            QR Scan Test
-        </a>
-        <a data-role="button" target="_blank" data-theme="b" href="05findtheview01.html">
-           findtheview
-        </a>
-		<a data-role="button" target="_blank" data-theme="b" href="04turm04_wappen.html">
-           wappen
-        </a>
-        <a data-role="button" target="_blank" data-theme="b" href="02lab01_connectdots.html">
-           ConnectTheDots
-        </a>
-        
-        <script type="text/javascript">
+		 <script type="text/javascript">
        function ZielWeiterleitung() {
 	      window.location.href=item_value; 
            }
        </script>
-        
-        <a id="weiterButton" data-role="button" target="_blank" data-theme="b" href="javascript:ZielWeiterleitung()">
-           Fortsetzen
-        </a>
+		<!-- /content -->
+		<img class="chara" src="img/markgraf_title.gif" alt="chara"/>
+		<div id="navi">
+		<a data-role="button" target="_blank" data-theme="a" href="00start01.html"> Start</a>
+        <a data-role="button" data-theme="a" href="#start_02"> Über </a>
+		<a id="weiterButton" data-role="button" target="_blank" data-theme="b" href="javascript:ZielWeiterleitung()">Fortsetzen</a>
+		<a data-role="button" target="_blank" data-theme="a" href="debug.html"> Debug </a> </div>
 	</div>
 	<!-- /page -->
+	
+	
+		<div data-role="page" id="start_02" class="page">
+		<div  data-role="content" id="ueber">
+			<h2>Über diese App</h2>
+			<p>Diese App ist im Rahmen einer Studienarbeit an der <strong>Hochschule Ansbach</strong> 
+			in Zusammenarbeit mit der Stadt Gunzenhausen entstanden.</p>
+			<p>Plattform: Android mit Phonegap und jQuery mobile</p>
+			<p>Programmierung: Sandra Taubmann, Lisa Schmidt, Dominik Stein, Marco Dorner</p>
+			<p>Story: Sandra Taubmann</p>
+			<p>Illustrationen: Lisa Schmidt (<a href="http://www.mullana.de">mullana.de</a>)</p>
+			<p> Betreuender Professor: <br />Prof. Helmut Roderus</p>
+			<p> Betreuer der Stadt Gunzenhausen: <br />Horst Schäfer</p>
+			<br />
+			<p><strong> Wir wünschen Ihnen viel Spaß beim spielerischen Erkunden der Stadt! </strong></p>
+		</div> <!-- /content-->
+		<div class="footer ui-bar" data-role="footer" data-position="fixed">
+		</div> <!-- /footer-->
+	</div> 	<!-- /page -->
 
 
 </body>
