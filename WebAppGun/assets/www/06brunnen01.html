@@ -15,7 +15,7 @@
 <script> <!-- Löst QR Code Scanner aus-->
 function scan() {$("#qrscan").click(function() {qrscan("07glocken01.html");});} <!-- Löst QR Code Scanner aus-->
 
-var bg = ["rgb(146, 163, 91)", "rgb(255, 255, 102)", "rgb(149, 179, 215)", "rgb(150, 54, 52)", "rgb(255, 255, 255)" ];
+var bg = ["rgb(146, 163, 91)", "rgb(255, 255, 102)", "rgb(149, 179, 215)", "rgb(150, 54, 52)", "rgb(196, 174, 151)" ];
 function setColor(el) {
 	el.colorIdx = el.colorIdx || 0;
 	el.style.backgroundColor = bg[el.colorIdx++ % bg.length];
@@ -52,7 +52,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -71,7 +70,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -88,7 +86,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -106,7 +103,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -124,7 +120,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -141,7 +136,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -159,7 +153,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -175,8 +168,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/maedel1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a> 
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -193,7 +185,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -209,8 +200,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/maedel1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a> 
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -219,25 +209,27 @@ window.onload=scan;
     <div class="inhalt left" data-role="content">
         <div class="raetsel_text">
             <h1>Bunte Straße</h1>
-            <p>In einer Straße stehen fünf Häuser, die in den Farben Weiß, Grün, Gelb, Blau und Rot gestrichen sind.</p>
+            <p>In einer Straße stehen fünf Häuser, die in den Farben Braun, Grün, Gelb, Blau und Rot gestrichen sind.</p>
 				<ul>
-					<li>Das rote Haus steht nicht neben dem weißen Haus.</li>
-					<li>Das blaue Haus steht zwischen dem grünen Haus und dem weißen Haus</li>
+					<li>Das rote Haus steht nicht neben dem braunen Haus.</li>
+					<li>Das blaue Haus steht zwischen dem grünen Haus und dem braunen Haus</li>
 					<li>Das grüne Haus ist das Letzte in der Straße.</li>
 				</ul>
+				<p>(Tippe auf ein Haus, um seine Farbe zu ändern)</p>
+				<br>
 					<div id="houses">
 						<div id="h1" onclick="setColor(this)"><img src="img/haus.gif" alt="haus1"></div>
 						<div id="h2" onclick="setColor(this)"><img src="img/haus.gif" alt="haus2"></div>
 						<div id="h3" onclick="setColor(this)"><img src="img/haus.gif" alt="haus3"></div>
 						<div id="h4" onclick="setColor(this)"><img src="img/haus.gif" alt="haus4"></div>
 						<div id="h5" onclick="setColor(this)"><img src="img/haus.gif" alt="haus5"></div>
+						<div>&nbsp;</div>
 					</div>
 					<div data-theme="a" data-role="button" style="clear:both" onclick="houses()">Stimmt so!</div>				</div>
 			<!--<a href="#page06_12">Weiterleitung</a>-->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
+        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -254,7 +246,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -274,8 +265,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/maedel1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a> 
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -289,8 +279,6 @@ window.onload=scan;
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -298,8 +286,11 @@ window.onload=scan;
 <div data-role="page" id="moreinfo" class="page">
     <div class="inhalt" data-role="content">
         <div class="infotext">
-            <h1>Infotext</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
+            <h2>Jüdisches Denkmal</h2>
+            <p>Von einem der schönsten jüdischen Gotteshäuser Frankens bleibt nur die Erinnerung.</p>
+			<p>1834 erwirbt die jüdische Kultusgemeinde das heutige Kreisverkehrsamt als Wohnhaus für den Vorsänger und Schächter und als Unterrichtsraum. Gleich gegenüber stand die 1882/83 errichtete Synagoge, eines der schönsten jüdischen Gotteshäuser Frankens.</p>
+			<p>Nach der „Reichskristallnacht“ im November 1938 wurde sie an die Stadt verkauft, die Turmkuppeln zerstört und die Judengemeinde vertrieben. Daran erinnert das Denkmal hinter dem Kreisverkehrsamt.</p>
+			<p>1980/81 wurde das ehemalige Gotteshaus schließlich abgerissen und die Tiefgarage gebaut.</p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
@@ -309,7 +300,7 @@ window.onload=scan;
 
 <!-- Hilfeseite -->
 <div data-role="page" id="help" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
         <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -317,7 +308,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="#hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
         <a href="notify.html" data-role="button">Problem melden</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -325,9 +316,9 @@ window.onload=scan;
 
 <!-- Hinweisseite -->
 <div data-role="page" id="hint" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
-        <p>Hinweistext</p>
+        <p>Das rote Haus muss am Anfang der Stra0e stehen - es steht <b>nicht</b> neben dem Weißen, welches in der Mitte steht.</p>
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->

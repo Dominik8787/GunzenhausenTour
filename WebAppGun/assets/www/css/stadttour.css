@@ -108,13 +108,18 @@ top:103%;
 }
 
 /*===================== 04 ===================== */
-#houses {height: 10%; margin: 0 0 30px}
-#houses div{background-color: #fff; float: left; height: 100%; width: 13%; margin-left: 5%; border: 1px solid #000;}
-
-/*===================== 06 ===================== */
-#felder {height: 10%; }
+#felder {height: 10%;}
 #felder img {width: 50%;}
 #felder div{background-color: #fff; height: 25px; width: 50%;; margin: 2% auto; border: 1px solid #000; padding: 3px;}
+
+/*===================== 06 ===================== */
+#houses { margin: 0 5% 30px; background: #fff; border: 2px solid #bbb; padding:2% 0}
+#houses div{background-color: #444; float: left; height: 100%; width: 17.6%; margin-left: 2%; }
+#houses div:nth-child(5){margin: none;}
+#houses div:nth-child(6){border: none; height: 0; float: none; clear:both}
+#houses div img {width: 100%; margin-bottom: -15%}
+
+
 
 /* ======================= Mehr Informationen ======================*/
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 5px; min-height: 100%}
