@@ -54,7 +54,7 @@ top: 70%;
 }
 .inhalt.left .sbText:after {background-image: url(../img/haken_links.png); left: -18px}
 .inhalt.right .sbText:after {background-image: url(../img/haken_rechts.png); right: -20px;}
-.inhalt.up .sbText:after {background-image: url(../img/haken_oben.png); left: 40%; top:-8.6%}
+.inhalt.up .sbText:after {background-image: url(../img/haken_oben.png); left: 40%; top:-9.6%}
 
 /* ------------------------ Alternative CSS Sprechblase Ende ------------------*/
 /* sdnfasldf*/
