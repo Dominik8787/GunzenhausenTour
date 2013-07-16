@@ -13,7 +13,7 @@
 <script src="js/barcodescanner.js"></script>
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
-function scan() {$("#qrscan").click(function() {qrscan("testID");});}
+function scan() {$("#qrscan").click(function() {qrscan("glocken.html");});}
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg08.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -34,7 +34,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -49,7 +48,7 @@ window.onload=scan;
 				<p>Haben die nicht dieselben Farben wie die Häuser in dem Rätsel? Wie war noch die Reihenfolge?</p>
 				<p>Rot, Gelb, Weiß, Blau, Grün?</p>
             </div>
-            <a href="#page07_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+            <a href="07glocken_r.html" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
         </div>
         <img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
@@ -231,7 +230,6 @@ window.onload=scan;
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
         <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -241,8 +239,11 @@ window.onload=scan;
 <div data-role="page" id="moreinfo" class="page">
     <div class="inhalt" data-role="content">
         <div class="infotext">
-            <h1>Infotext</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
+            <h2>Historischer Marktplatz</h2>
+            <p>Historisches mit Modernem verbindet der abwechslungsreiche Marktplatz Gunzenhausens.</p>
+            <p>So steht vor dem Gebäude der heutigen Sparkasse (Nr. 43), einem Mitte des 19. Jhds. entstandenen Schulhaus, seit 1996 der Glockenturm. Unweit davon kann man die ehemalige Stadtvogtei (Nr. 42), bewundern, die, wie der Name schon sagt, Stadtvogt Beeg 1749/50 erbauen lässt, um hier seine Amtsgeschäfte auszuüben.</p>
+            <p>Schräg gegenüber befindet sich das Ehemalige Amtshaus (Nr. 37), ein herausragendes Beispiel von Barockarchitektur. 1726 von einem Major als Ruhesitz erstellt, zwischenzeitlich als Sitz der örtlichen Verwaltung genutzt, befindet sich hier seit 1805 eine Apotheke.</p>
+            <p>Von dieser Straßenseite aus hat man einen schönen Blick auf den imposanten Fachwerkgiebel (Nr. 28) aus dem 17. Jhd., dem einstmaligen „Gasthof zum Lamm“. Das ehemalige Bürgerhaus (Nr. 25), indem sich heute das Verkehrsamt der Stadt befindet, stammt vom Beginn des 19. Jhds. und war im sog. Stockwerkseigentum zwischen bis zu sechs Parteien aufgeteilt.</p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">

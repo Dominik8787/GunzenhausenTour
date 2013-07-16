@@ -33,7 +33,7 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Wer kann helfen?</h1>
-            <p style="margin-top:-10%;">Verbinde die <strong>rot leuchtenden Punkte</strong>, um einen Hinweis zu bekommen!</p>
+            <p style="margin-top:-6%;">Verbinde die <strong>rot leuchtenden Punkte</strong>, um einen Hinweis zu bekommen!</p>
              </div>
 			﻿<!--
 To change this template, choose Tools | Templates
@@ -46,23 +46,23 @@ and open the template in the editor.
         <canvas id="canvas" width="320" height="480"></canvas>
         <!--  hier werden die einzelnen Punkte als div generiert -->
         <div id="overlay">
-            <div id="punkt0" class="punkt"></div>
-            <div id="punkt1" class="punkt"></div>
-            <div id="punkt2" class="punkt"></div>
-            <div id="punkt3" class="punkt"></div>      
-            <div id="punkt4" class="punkt"></div>
-            <div id="punkt5" class="punkt"></div>
-            <div id="punkt6" class="punkt"></div>
-            <div id="punkt7" class="punkt"></div>      
-            <div id="punkt8" class="punkt"></div>
-            <div id="punkt9" class="punkt"></div>
-            <div id="punkt10" class="punkt"></div>
-            <div id="punkt11" class="punkt"></div>
-            <div id="punkt12" class="punkt"></div>
-            <div id="punkt13" class="punkt"></div>
-            <div id="punkt14" class="punkt"></div>
-            <div id="punkt15" class="punkt"></div>
-            <div id="punkt16" class="punkt"></div>
+             <div id="punkt0" class="punkt"></div>
+            <div id="punkt1" class="punkt unclickable"></div>
+            <div id="punkt2" class="punkt unclickable"></div>
+            <div id="punkt3" class="punkt unclickable"></div>      
+            <div id="punkt4" class="punkt unclickable"></div>
+            <div id="punkt5" class="punkt unclickable"></div>
+            <div id="punkt6" class="punkt unclickable"></div>
+            <div id="punkt7" class="punkt unclickable"></div>      
+            <div id="punkt8" class="punkt unclickable"></div>
+            <div id="punkt9" class="punkt unclickable"></div>
+            <div id="punkt10" class="punkt unclickable"></div>
+            <div id="punkt11" class="punkt unclickable"></div>
+            <div id="punkt12" class="punkt unclickable"></div>
+            <div id="punkt13" class="punkt unclickable"></div>
+            <div id="punkt14" class="punkt unclickable"></div>
+            <div id="punkt15" class="punkt unclickable"></div>
+            <div id="punkt16" class="punkt unclickable"></div>
         </div>
        
   <script type="text/javascript">
@@ -74,7 +74,9 @@ and open the template in the editor.
          
     </div> <!-- /content-->
  <div class="footer ui-bar" data-role="footer" data-position="fixed">
+ <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
  <a id="WeiterButtonConnectTheDots" href="javascript:Target()" data-prefetch="true" data-role="button">Weiter</a>
+ 
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -82,7 +84,7 @@ and open the template in the editor.
 
 <!-- Hilfeseite -->
 <div data-role="page" id="help" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
         <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -90,7 +92,7 @@ and open the template in the editor.
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="#hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
         <a href="notify.html" data-role="button">Problem melden</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -98,9 +100,9 @@ and open the template in the editor.
 
 <!-- Hinweisseite -->
 <div data-role="page" id="hint" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
-        <p>Hinweistext</p>
+        <p>Tippe nacheinander die rot aufleuchtenden Punkte an, um Linien zwischen ihnen zu ziehen. Daraus ergibt sich ein Hinweisbild!</p>
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->

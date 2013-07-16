@@ -1,5 +1,5 @@
 function qrscan(pageID){
-	alert(pageID);
+	//alert(pageID);
 	
 	//Barcode Scanner
 	window.plugins.barcodeScanner.scan( 
@@ -8,9 +8,9 @@ function qrscan(pageID){
 
 					//Holt Seitennamen aus der URL, indem er den ersten Teil der URL wegwirft (http://www.stadttour.gunzenhausen.de?pageName)
 				 	var res = result.text.substring(37); 
-					alert("We got a barcode\n" +	"Result: " + result.text + "\n res: "+ res);
+					//alert("We got a barcode\n" +	"Result: " + result.text + "\n res: "+ res);
                   	if(res == pageID) {      		
-                  		alert("Textmatch!");
+                  		//alert("Textmatch!");
                   		window.localStorage.setItem( 'qrcode', pageID);
                   		window.location.href=pageID;			
                   	} else {

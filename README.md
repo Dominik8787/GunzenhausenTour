@@ -4,6 +4,29 @@ GunzenhausenTour
 Stadtour App für die Stadt Gunzenhausen mit PhoneGap
 
 
+ACHTUNG, NEUER WORKFLOW:
+
+- für jeden Bearbeiter (auch möglich: jede Aufgabe) neuen Branch erstellen  
+	Eclipse: Team > Switch to > new Branch  
+		Remote Master  und merge auswählen  
+
+- Pull:
+	Eclipse: Team > Synchronize Workspace  
+		neue Dateien erscheinen in ihren Pfaden  
+		nochmal Pull aus den Symbolen in der Leiste oben wählen  
+	(evtl. muss erst bei Team > Remote > Fetch from... der Remote Master als Origin   
+	und der lokale Branch als Destination eingestellt werden (force update zur Sicherheit aus))  
+
+- Push:  
+	Eclipse: Team > Commit, dann Commit & Push  
+	github: eigenen lokalen Branch auswählen und oben rechts Pull Request auswählen  
+		danach Request nocheinmal mit dem Balken bestätigen  
+		Pull Request an der Seite auswählen, eigenes Request wählen und mit dem grünen   
+		Button mergen und bestätigen  
+		-> Commit wird zum Master Branch hinzugefügt  
+
+
+
 Seiten/ Stations Template
 ==========================================================================================
 ==========================================================================================

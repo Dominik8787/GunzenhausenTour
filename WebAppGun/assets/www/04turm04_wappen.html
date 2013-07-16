@@ -14,6 +14,26 @@
 <script src="js/qr_scan.js"></script>
 <script> <!-- Löst QR Code Scanner aus-->
 function scan() {$("#qrscan").click(function() {qrscan("testID");});}
+
+
+var hg = ["rgb(255, 255, 255)", "rgb(85, 126, 190)", "rgb(252, 243, 71)"];
+function farbeSetzen(el) {
+	el.colorIdx = el.colorIdx || 0;
+	el.style.backgroundColor = hg[el.colorIdx++ % hg.length];
+}
+function farbcheck() {
+	//alert(hg[0]);
+	//alert($('#feld1').css('backgroundColor'));
+	if(
+		$('#feld1').css('backgroundColor') == hg[0] && 
+		$('#feld2').css('backgroundColor') == hg[2] &&
+		$('#feld3').css('backgroundColor') == hg[1] 
+) {
+			window.location.href='04turm04.html#page04_4_03'; }
+	else{alert("Das stimmt noch nicht ganz...");}
+}
+
+
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg05.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
@@ -32,26 +52,29 @@ window.onload=scan;
     <div class="inhalt" data-role="content">
         <div class="raetsel_text">
             <h1>Wappen Rätsel</h1>
-			<div id="wappenwrapper">
-			 <object data="js/wappenGUN.svg" type="image/svg+xml" class="svg"> 
-				<h1>uups</h1>
-			 </object>
+	<div id="wappenwrapper"  width="200px" height="220px">
+			<!--<object data="js/wappenGUN.svg" type="image/svg+xml" class="svg"> -->
+				<div id="felder">
+						<img src="img/wappenGUN.png" alt="Stadtwappen"/> <br />
+						<div id="feld1" onclick="farbeSetzen(this)">Welle</div>
+						<div id="feld2" onclick="farbeSetzen(this)">Haus</div>
+						<div id="feld3" onclick="farbeSetzen(this)">Hintergrund</div>
+					</div>
+					<div data-theme="a" data-role="button" style="clear:both" onclick="farbcheck()">Stimmt so!</div>
+			<!-- </object> -->
 			</div>
-			<a href="04turm04#page04_4_03">braucht eine Weiterleitung/ einen Weiter-Button zu 04turm04#page04_4_03</a></p>
-            <p></p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
 
 		<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
-        <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
 
 <!-- Hilfeseite -->
 <div data-role="page" id="help" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
         <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -59,7 +82,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="#hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
         <a href="notify.html" data-role="button">Problem melden</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -67,9 +90,9 @@ window.onload=scan;
 
 <!-- Hinweisseite -->
 <div data-role="page" id="hint" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
-        <p>Hinweistext</p>
+        <p>Male das Gunzenhausener Stadtwappen in den richtigen Farben aus! Ganz in der Nähe gibt es dafür eine Vorlage.</p>
         </div>
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
