@@ -1,57 +1,82 @@
+ window.onload = function() {
+ document.addEventListener("deviceready", function() {
+alert("cordova loaded!");
+//var audio = new Array();
+//audio[1] = new Media("android_asset/www/audio/a1.mp3");
+//audio[2] = new Media("/android_asset/www/audio/a2.mp3");
+//audio[3] = new Media("/android_asset/www/audio/a3.mp3");
+//audio[4] = new Media("/android_asset/www/audio/a4.mp3");
+//audio[5] = new Media("/android_asset/www/audio/a5.mp3");
+//audio[6] = new Media("/android_asset/www/audio/all.mp3");
+
+var link = "#page07_r_01";
 $(document).ready(function() {
-	var link = "#page07_r_01";
-	// Die Variable, die der Funktion grscan() mitgegeben wird bestimmt die
-	// erwartete Glocke.
-	// Um die richtige Reihenfolge festzulegen, die Namen g1, g2, g3,...
-	// entsprechend tauschen.
-	$("#qrscan1").click(function() {
-		qrscan("g1");
-		link = "#page07_r_02";
-	});
-	$("#qrscan2").click(function() {
-		qrscan("g2");
-		link = "#page07_r_03";
-	});
-	$("#qrscan3").click(function() {
-		qrscan("g3");
-		link = "#page07_r_04";
-	});
-	$("#qrscan4").click(function() {
-		qrscan("g4");
-		link = "#page07_r_05";
-	});
-	$("#qrscan5").click(function() {
-		qrscan("g5");
-		link = "#page07_r_06";
-	});
+document.addEventListener("deviceready", onDeviceReady, false);
 
-	function qrscan(glocke) {
-		// Barcode Scanner
-		window.plugins.barcodeScanner.scan(
-		// Wenn Scan erfolgreich
-		function(result) {
-			// Holt Seitennamen aus der URL, indem er den ersten Teil der URL
-			// wegwirft (http://www.stadttour.gunzenhausen.de?pageName)
-			var res = result.text.substring(37);
-			var audio = "audio#a" + res.substring(1); // wird code mit
-														// res="g1" aufgerufen
-														// wird audio#1
-														// abgespielt.
-			if (res === glocke) {
-				if (link === "#page07_r_06"){
-					$("audio#all")[0].play();
-				}
-				else {
-					$(audio)[0].play();
-				}
-				window.location.href = link;
-
-			} else {
-				$(audio)[0].play();
-				window.location.href = "#page07_r_fehler";
-			}
-		}, function(error) {
-			alert("Scanning failed: " + error);
-		});
-	}
+// device APIs are available
+//
+function onDeviceReady() {
+alert("Cordova loaded!");
+}
+;
+$(".holz").click(function() {
+alert("TESSST");
+//audio[a].play();
 });
+// Die Variable, die der Funktion grscan() mitgegeben wird bestimmt die
+// erwartete Glocke.
+// Um die richtige Reihenfolge festzulegen, die Namen g1, g2, g3,...
+// entsprechend tauschen.
+
+$("#qrscan1").click(function() {
+//audio[1].play();
+link = "#page07_r_02";
+qrscan("g1");
+});
+$("#qrscan2").click(function() {
+link = "#page07_r_03";
+qrscan("g2");
+});
+$("#qrscan3").click(function() {
+link = "#page07_r_04";
+qrscan("g3");
+});
+$("#qrscan4").click(function() {
+link = "#page07_r_05";
+qrscan("g4");
+});
+$("#qrscan5").click(function() {
+link = "#page07_r_06";
+qrscan("g5");
+});
+
+function qrscan(glocke) {
+// Barcode Scanner
+window.plugins.barcodeScanner.scan(
+// Wenn Scan erfolgreich
+function(result) {
+// Holt Seitennamen aus der URL, indem er den ersten Teil der
+// URL
+// wegwirft (http://www.stadttour.gunzenhausen.de?pageName)
+var res = result.text.substring(37);
+// var audio = "audio#a" + res.substring(1);
+var a = res.substring(1);
+if (res === glocke) {
+if (link === "#page07_r_06") {
+// audio[6].play(); // $("audio#all")[0].play();
+} else {
+// audio[a].play();// $(audio)[0].play();
+}
+window.location.href = link;
+
+} else {
+// audio[a].play(); // $(audio)[0].play();
+window.location.href = "#page07_r_fehler";
+}
+}, function(error) {
+alert("Scanning failed: " + error);
+});
+}
+});
+});
+}
