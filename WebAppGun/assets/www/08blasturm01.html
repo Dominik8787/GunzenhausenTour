@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Blasturm - Stadttour</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css" />
+<link rel="stylesheet" href="css/stadttour.css" />
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/stadttour.js"></script>
+<script src="js/jquery.mobile-1.3.0.min.js"></script>
+<script src="cordova.js"></script>
+<script src="js/barcodescanner.js"></script>
+<script src="js/qr_scan.js"></script>
+<script> <!-- Löst QR Code Scanner aus-->
+function scan() {$("#qrscan").click(function() {qrscan("testID");});}
+window.onload=scan;
+</script>
+<style type="text/css">.inhalt {background-image: url(img/hg/hg01.jpg); } </style> <!-- Individuelles Hintergrundbild für Station fest -->
+</head>
+
+<body>
+<!--Startseite -->
+<div data-role="page" id="page08_01" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+  <div class="inhalt left" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Hier!</p>
+                <p>Das ist der Blasturm! Er wird auch als Ansbacher Torturm bezeichnet. 'Blasturm' heißt natürlich, weil die Späher von dort Alarm geblasen haben, wenn sich ein Feind der Stadt näherte...</p>
+            </div>
+            <a href="#page08_02" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/markgraf1.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+<!--Seite 2-->
+<div data-role="page" id="page08_02" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Oh! Seht doch!</p>
+                <p>Da oben auf der Spitze!</p>
+				<p><b>Mein Falke!</b></p>
+            </div>
+            <a href="#page08_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+<!--Seite 3-->
+<div data-role="page" id="page08_02" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Da bist du ja, mein Prachtvogel! Wie gut, dass dir nichts passiert ist!</p>
+            </div>
+            <a href="#page08_03" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+<!--Seite 3-->
+<div data-role="page" id="page08_03" class="page"> <!-- id = page[Nr der Station]_[Nr der Subpage] -->
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+            <div>
+                <p>Nun, was euch betrifft, ihr Herrschaften...ich sollte euch wohl für eure Hilfe entlohnen lassen...</p>
+                <p>Warum geht ihr nicht in das Touristikbüro und sagt, der wilde Markgraf hätte euch geschickt?</p>
+            </div>
+            <a href="#page08_04" data-prefetch="true" class="weiterButton" data-role="button" data-theme="a">Weiter</a> <!-- Link zur nächsten Seite -->
+        </div>
+        <img class="chara" src="img/chara/markgraf3.gif" alt="chara"/> <!-- Charakterbild -->
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+<!--Rätselseite -->
+<div data-role="page" id="page08_04" class="page">
+    <div class="inhalt left" data-role="content">
+        <div class="raetsel_text">
+            <h1>Hohlt euch eure Belohnung ab!</h1>
+            <p>Zeigt diese Seite im Touristen Informationsbüro vor, um die versprochene Belohnung zu erhalten!<p>
+			<br>
+			<p>Die Stadttour ist hiermit zu Ende.</p>
+			<p>Vielen Dank für die Teilnahme!</p>
+        <a href="#page00_06" id="qrscan" data-role="button" data-theme="a">Scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
+        </div>
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+<!-- Mehr Infos Zur Station / Triviaseite -->   
+<div data-role="page" id="moreinfo" class="page">
+    <div class="inhalt" data-role="content">
+        <div class="infotext">
+            <h2>Blasturm</h2>
+            <p>Der Blasturm wird auch als Ansbacher Torturm oder Neues Tor bezeichnet. Der Unterbau ist quadratisch. Der obere Teil des 33 Meter hohen Turmes entstand 1603, vermutlich nach einem Einsturz von 1578.</p>
+			<p>Die einstige Wohnung des Stadttürmers im oberen Stock, die auch heute noch besichtigt werden kann, diente zur Ausschau nach Feinden und Feuerbrünsten, sowie dem "Turmblasen". Der herrliche Rundblick lässt sich im Rahmen einer Führung durch den Turm genießen. Gerne werden auch Gruppen (auf Anfrage) geführt.</p>
+        </div>
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+<!-- Hilfeseite -->
+<div data-role="page" id="help" class="page">
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+        <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
+        <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
+        </div>
+        <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="notify.html" data-role="button">Problem melden</a>
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+
+<!-- Hinweisseite -->
+<div data-role="page" id="hint" class="page">
+    <div class="inhalt left" data-role="content">
+        <div class="sbText">
+        <p>Hinweistext</p>
+        </div>
+        <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
+    </div> <!-- /content-->
+    <div class="footer ui-bar" data-role="footer" data-position="fixed">
+    </div> <!-- /footer-->
+</div>  <!-- /page -->
+
+</body>
+</html>
