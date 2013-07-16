@@ -17,7 +17,9 @@ function scan() {$("#qrscan").click(function() {qrscan("04turm01.html");});}
 window.onload=scan;
 </script>
 <style type="text/css">.inhalt {background-image: url(img/hg/hg04.jpg); } 
-						#findtheview {width: 90%;}</style> <!-- Individuelles Hintergrundbild für Station fest -->
+						#findtheview {width: 60%;}
+						#infotext {margin: 2% 5% 2% 5%;}
+						</style> <!-- Individuelles Hintergrundbild für Station fest -->
 </head>
 
 <body>
@@ -76,8 +78,8 @@ window.onload=scan;
 <div data-role="page" id="page03_04" class="page">
     <div class="inhalt left" data-role="content">
         <div class="raetsel_text">
-            <h1>Los gehts!</h1>
-            <p>Findet den Ort, von dem aus das folgende Foto aufgenommen wurde, um mit dem Storch zu sprechen!</p>
+           <!-- <h1>Los gehts!</h1> -->
+            <p id="infotext">Findet den Ort, von dem aus das folgende Foto aufgenommen wurde, um mit dem Storch zu sprechen!</p>
 			<img id="findtheview" src="img/findtheview.jpg" alt="Storchennest"/>
 			<div class=alert>
 				<h4>Achtung!</h4>
