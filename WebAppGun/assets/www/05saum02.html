@@ -38,7 +38,6 @@ window.onload=scan;
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
         <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -56,8 +55,7 @@ window.onload=scan;
         <img class="chara" src="img/chara/storch1.gif" alt="chara"/> <!-- Charakterbild -->
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
-        <a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>  
+        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a> 
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
@@ -68,12 +66,11 @@ window.onload=scan;
         <div class="raetsel_text">
             <h1>Los geht's</h1>
             <p>Begib dich zu dem Brunnen, um das Mädchen zu finden!</p>
-			Karte zum Brunnen
+			<iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.de/maps?f=d&amp;source=s_d&amp;saddr=Wei%C3%9Fenburger+Stra%C3%9Fe&amp;daddr=Hafnermarkt&amp;hl=de&amp;geocode=FWdi7QIdKh-kAA%3BFepp7QId2R-kAA&amp;aq=0&amp;oq=Sonnenstr%C3%9Fe,+Gun&amp;sll=49.112352,10.756119&amp;sspn=0.004544,0.011694&amp;t=h&amp;dirflg=w&amp;mra=dme&amp;mrsp=1&amp;sz=17&amp;ie=UTF8&amp;ll=49.112661,10.755916&amp;spn=0.004214,0.006416&amp;z=16&amp;output=embed"></iframe><br /><small><a href="https://maps.google.de/maps?f=d&amp;source=embed&amp;saddr=Wei%C3%9Fenburger+Stra%C3%9Fe&amp;daddr=Hafnermarkt&amp;hl=de&amp;geocode=FWdi7QIdKh-kAA%3BFepp7QId2R-kAA&amp;aq=0&amp;oq=Sonnenstr%C3%9Fe,+Gun&amp;sll=49.112352,10.756119&amp;sspn=0.004544,0.011694&amp;t=h&amp;dirflg=w&amp;mra=dme&amp;mrsp=1&amp;sz=17&amp;ie=UTF8&amp;ll=49.112661,10.755916&amp;spn=0.004214,0.006416&amp;z=16" style="color:#0000FF;text-align:left">Größere Kartenansicht</a></small>
         <a href="#page00_06" id="qrscan" data-role="button" data-theme="a">QR-Code scannen!</a><!-- Button zum Auslösen der QR-Scan Funktion -->
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#moreinfo" data-prefetch="true" data-role="button">Infos zum Ort</a>
         <!--<a href="#help" data-prefetch="true" data-role="button">Hilfe!</a>-->
     </div> <!-- /footer-->
 </div>  <!-- /page -->
@@ -83,8 +80,8 @@ window.onload=scan;
 <div data-role="page" id="moreinfo" class="page">
     <div class="inhalt" data-role="content">
         <div class="infotext">
-            <h1>Infotext</h1>
-            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore... </p>
+            <h2>Saumarkt</h2>
+            <p>Die Bronzeskulptur „Mensch und Schwein“ des Nürnberger Künstlers Christian Rösner erinnert seit 1997 an die Märkte, die lange Zeit auf diesem Platz außerhalb der Stadtmauern stattfanden. Schon seit dem ausgehenden Mittelalter zählt dieser Teil zur Unteren Vorstadt von Gunzenhausen.</p>
         </div>
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
@@ -94,7 +91,7 @@ window.onload=scan;
 
 <!-- Hilfeseite -->
 <div data-role="page" id="help" class="page">
-    <div class="inhalt" data-role="content">
+    <div class="inhalt left" data-role="content">
         <div class="sbText">
         <p>Gibt es ein Problem? Vielleicht kann ich ja mit einem Hinweis helfen...</p>
         <p>Aber falls nicht, würdet ihr das Problem bitte melden?</p>
@@ -102,23 +99,11 @@ window.onload=scan;
         <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
     </div> <!-- /content-->
     <div class="footer ui-bar" data-role="footer" data-position="fixed">
-        <a href="#pageXX_hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
+        <a href="#hint" data-prefetch="true" data-role="button">Hinweis, bitte!</a>
         <a href="notify.html" data-role="button">Problem melden</a>
     </div> <!-- /footer-->
 </div>  <!-- /page -->
 
-
-<!-- Hinweisseite -->
-<div data-role="page" id="hint" class="page">
-    <div class="inhalt" data-role="content">
-        <div class="sbText">
-        <p>Hinweistext</p>
-        </div>
-        <img class="chara" src="img/chara/markgraf1.gif" alt="chara" />
-    </div> <!-- /content-->
-    <div class="footer ui-bar" data-role="footer" data-position="fixed">
-    </div> <!-- /footer-->
-</div>  <!-- /page -->
 
 </body>
 </html>
