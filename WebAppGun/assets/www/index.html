@@ -14,7 +14,9 @@ More info: http://view.jquerymobile.com/1.3.0/
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery.mobile-1.3.0.min.js"></script>
 <script src="js/statussave.js"> </script>
-<script>document.addEventListener("deviceready", onDeviceReady(), false)</script>
+
+<!--  entfernt, da jQuery noch nicht geladen war wenn onDeviceReady gecalled wurde -->
+<!--  <script>document.addEventListener("deviceready", onDeviceReady(), false)</script> -->
 </head>
 <body>
 	<div data-role="page">
@@ -33,7 +35,7 @@ More info: http://view.jquerymobile.com/1.3.0/
             Start
         </a>
         <a data-role="button" data-theme="b" href="#page1">
-            Ãœber
+            Über
         </a>
        	<a data-role="button" target="_blank" data-theme="b" href="01geo01.html"> Station 1(geodätischer Pkt)        </a>
        	<a data-role="button" target="_blank" data-theme="b" href="02lab01.html"> Station 2(Labyrinth)        </a>
@@ -58,8 +60,19 @@ More info: http://view.jquerymobile.com/1.3.0/
         <a data-role="button" target="_blank" data-theme="b" href="02lab01_connectdots.html">
            ConnectTheDots
         </a>
+        
+        <script type="text/javascript">
+       function ZielWeiterleitung() {
+	      window.location.href=item_value; 
+           }
+       </script>
+        
+        <a id="weiterButton" data-role="button" target="_blank" data-theme="b" href="javascript:ZielWeiterleitung()">
+           Fortsetzen
+        </a>
 	</div>
 	<!-- /page -->
+
 
 </body>
 </html>
