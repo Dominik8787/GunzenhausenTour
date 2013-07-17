@@ -119,7 +119,10 @@ top:103%;
 #houses div:nth-child(6){border: none; height: 0; float: none; clear:both}
 #houses div img {width: 100%; margin-bottom: -15%}
 
-
+/*===================== 07 ===================== */
+p.debug {
+	display: none;
+}
 
 /* ======================= Mehr Informationen ======================*/
 .infotext {background: rgba(255,255,255,0.8); border: 1px solid #777; width: 100%; padding: 5px; min-height: 100%}
