@@ -13,8 +13,8 @@ var x = 7, a = 2, b = 2, c = 2, d = 2;
 $(document).ready(function()
 {
     var h = $("#holzwrapper").width();
-    $("#holzwrapper tr:nth-child(2n) img").css("height", h/6);
-    $("#holzwrapper td:nth-child(2n) img").css("width", h/6);
+    $("#holzwrapper tr:nth-child(2n) img").css("height", parseInt(h/7)+"px");
+    $("#holzwrapper td:nth-child(2n) img").css("width", parseInt(h/7)+"px");
     init();
     $(".holz").click(function() {
         if (vorrat !== 1 && $(this).css("opacity") === "1") { //nehmen
@@ -47,7 +47,6 @@ function init() {
  */
 function ende() {
     if (x === 9 && (a === 0 || b === 0 || c === 0 || d === 0)) {
-        alert("Sehr gut!");
 		window.location.href="05saum01.html#page05_09";
     }
     else {
@@ -62,16 +61,16 @@ function ende() {
 function gibAnweisung(move) {
     switch (move) {
         case 0:
-            $("#anweisung").html("Tippe das Gatter an, das du verschieben möchtest!");
+            $("#anweisung").html("Tippe das Gatter an, das du verschieben willst!");
             break;
         case 1:
-            $("#anweisung").html("Tippe an die leere Stelle, wohin du das Streichholz verschieben willst!");
+            $("#anweisung").html("Tippe an die leere Stelle, wohin du das Gatter verschieben willst!");
             break;
         case 2:
-            $("#anweisung").html("Tippe das zweite Gatter an, das du verschieben möchtest!");
+            $("#anweisung").html("Tippe das zweite Gatter an, das du verschieben willst!");
             break;
         case 3:
-            $("#anweisung").html("Tippe an die leere Stelle, wohin du das Streichholz verschieben willst!");
+            $("#anweisung").html("Tippe an die leere Stelle, wohin du das Gatter verschieben willst!");
             break;
     }
 }
