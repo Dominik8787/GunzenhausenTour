@@ -1,6 +1,5 @@
 window.onload = function() {
 	document.addEventListener("deviceready", function() {
-		alert("cordova loaded!");
 		// var audio = new Array();
 		// audio[1] = new Media("android_asset/www/audio/a1.mp3");
 		// audio[2] = new Media("/android_asset/www/audio/a2.mp3");
