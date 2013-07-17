@@ -55,7 +55,7 @@ window.onload = function() {
 
 				} else {
 					// audio[a].play();
-					window.location.href = "#page07_r_fehler";
+					window.location.href = "#page07_r_falsch";
 				}
 			}, function(error) {
 				alert("Scanning failed: " + error);
